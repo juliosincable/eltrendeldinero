@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Navigation from './component/navigation'
 import Home from './home'
 import DashBoard from './component/dashboard'
-
+import Users from './component/users'
+import Pay from './component/pay'
+import Control from './component/control'
 
 
 
@@ -21,6 +23,9 @@ function App() {
     
         <Route path="/" exact component={Home} />
         <Route path="/dashboard" component={DashBoard} />
+        <Route path="/users" component={Users} />
+        <Route path="/pay" component={Pay} />
+        <Route path="/control" component={Control} />
         
         
       </div>

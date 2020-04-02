@@ -15,17 +15,17 @@ export default class Home extends Component {
 <Container fluid>
      
      <Row>
-     <Col xs={12} sm={4} md={4} lg={4} xl={4}>El tren del dinero</Col>
+     <Col xs={12} sm={4} md={4} lg={4} xl={4}>El Tren del Dinero</Col>
      
 
      <Col xs={12} sm={4} md={4} lg={4} xl={4}>    
        <h1>
 
-         El tren del dinero
+       El Tren del Dinero
          </h1>
          </Col>
      <Col  xs={12} sm={4} md={4} lg={4} xl={4}> 
-     El tren del dinero
+     El Tren del Dinero
      </Col> 
      </Row>
    
