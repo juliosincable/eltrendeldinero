@@ -28,7 +28,7 @@ export default class Navigation extends Component {
                     
         <Nav.Link  href="/">Inicio</Nav.Link>
         <NavDropdown title="Menú" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/">Configuración</NavDropdown.Item>
+        <NavDropdown.Item href="/"><img src="logo.svg" width="25px" height="25px" alt="logo" /> Configuración</NavDropdown.Item>
         <NavDropdown.Item href="/users">Perfil</NavDropdown.Item>
         <NavDropdown.Item href="/pay">Pagar</NavDropdown.Item>
         <NavDropdown.Item href="/control">Control</NavDropdown.Item>

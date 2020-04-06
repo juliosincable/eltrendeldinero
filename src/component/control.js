@@ -24,9 +24,8 @@ export default class Control extends Component {
 
 <div> 
 <Row>      
-<Col xs={12} sm={4} md={4} lg={4} xl={4}> <Trainstation /><br /></Col>
-<Col xs={12} sm={4} md={4} lg={4} xl={4}> <Trainstation /><br /> </Col>
-<Col xs={12} sm={4} md={4} lg={4} xl={4}> <Trainstation /><br /> </Col>    
+<Col xs={12} sm={12} md={12} lg={12} xl={12}> <Trainstation /><br /></Col>
+    
 </Row>
 </div>
 
