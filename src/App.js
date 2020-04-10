@@ -12,14 +12,18 @@ import Control from './component/control'
 
 
 
+  
+
 function App() {
   return (
     <div className="App">
       
       
+     
        <Router>
+
       <Navigation />
-      <div className="container p-4">
+      
       
     
         <Route path="/" exact component={Home} />
@@ -28,10 +32,13 @@ function App() {
         <Route path="/pay" component={Pay} />
         <Route path="/control" component={Control} />
         
-        
-      </div>
+
+
     </Router>
+    
       
+    
+
     </div>
   );
 }
