@@ -28,9 +28,10 @@ export default class Home extends Component {
      <Col  xs={12} sm={4} md={4} lg={4} xl={4}> 
      <Authentication/ >
      </Col> 
+     
      </Row>
    
-
+     <h6>Derechos reservados Tren del Dinero 2020</h6>
      </Container> 
      </div>
      

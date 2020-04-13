@@ -24,7 +24,7 @@ function App() {
 
       <Navigation />
       
-      
+      <div>
     
         <Route path="/" exact component={Home} />
         <Route path="/dashboard" component={DashBoard} />
@@ -32,11 +32,9 @@ function App() {
         <Route path="/pay" component={Pay} />
         <Route path="/control" component={Control} />
         
-
+        </div>
 
     </Router>
-    
-      
     
 
     </div>
