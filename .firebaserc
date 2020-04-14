@@ -1,6 +1,7 @@
 {
   "projects": {
     "appeltrendeldinero": "apptrendeldinero",
-    "eltrendeldinero": "apptrendeldinero"
+    "eltrendeldinero": "apptrendeldinero",
+    "default": "apptrendeldinero"
   }
 }
