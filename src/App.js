@@ -1,13 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router} from 'react-router-dom'
 import Navigation from './component/navigation'
-import Home from './home'
-import DashBoard from './component/dashboard'
 import Users from './component/users'
-import Pay from './component/pay'
+import Invitar from './component/invitar'
 import Control from './component/control'
+import Home from "./Home";
+import Inicio from './component/Inicio'
+
+
+
+
 
 
 
@@ -17,26 +21,33 @@ import Control from './component/control'
 function App() {
   return (
     <div className="App">
-      
-      
      
-       <Router>
+     
+      
+      <Router>
 
       <Navigation />
       
-      <div>
-    
-        <Route path="/" exact component={Home} />
-        <Route path="/dashboard" component={DashBoard} />
+        <div>
+        <Route exact path="/" component={Inicio} />
+        
+        
+                     
+        <Route path="/dashboard" component={Home} />
         <Route path="/users" component={Users} />
-        <Route path="/pay" component={Pay} />
+        <Route path="/invitar" component={Invitar} />
         <Route path="/control" component={Control} />
+       
+        
+        
         
         </div>
 
     </Router>
-    
 
+   
+    
+    
     </div>
   );
 }

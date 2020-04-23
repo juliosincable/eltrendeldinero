@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+
 const config = {
     apiKey: "AIzaSyCXO7BZW4lAEYBRg_mof07YZII_t3CUQng",
     authDomain: "apptrendeldinero.firebaseapp.com",
@@ -10,10 +11,10 @@ const config = {
     appID: "1:810000659195:web:ee6a6814cbb45b143d765e",
     measurementId: "G-7N39EG7RR1"
 };
+
+
 // Initialize Firebase
 
-
-firebase.initializeApp(firebaseConfig);
-
-
+const fire = firebase.initializeApp(config);
 export default fire;
+

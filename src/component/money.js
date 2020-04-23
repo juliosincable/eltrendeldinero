@@ -32,9 +32,9 @@ export default class Money extends Component {
         <th>#</th>
         <th>Tren</th>
         <th>Puestos</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th>Invitados</th>
+        <th>Cobrado</th>
+        <th>Acumulado</th>
         <th>Total</th>
       </tr>
     </thead>
@@ -43,27 +43,27 @@ export default class Money extends Component {
         <td>1</td>
         <td>10</td>
         <td>Number</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Number</td>
+        <td>Number</td>
+        <td>Number</td>
         <td>Number</td>
       </tr>
       <tr>
         <td>2</td>
         <td>50</td>
         <td>Number</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Number</td>
+        <td>Number</td>
+        <td>Number</td>
         <td>Number</td>
       </tr>
       <tr>
         <td>3</td>
         <td>100</td>
         <td>Number</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Number</td>
+        <td>Number</td>
+        <td>Number</td>
         <td>Number</td>
       </tr>
     </tbody>
