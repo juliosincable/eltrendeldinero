@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 
-
+import {Button } from 'react-bootstrap';
 
 
 export default class Trainstation extends Component {
@@ -20,6 +20,7 @@ export default class Trainstation extends Component {
         <th>Table 50</th>
         <th>Table 100</th>
         <th>Total</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -31,6 +32,7 @@ export default class Trainstation extends Component {
         <td>Number</td>
         <td>Number</td>
         <td>Number</td>
+        <Button variant="danger">Eliminar</Button>
       </tr>
       <tr>
         <td>2</td>
@@ -40,6 +42,7 @@ export default class Trainstation extends Component {
         <td>Number</td>
         <td>Number</td>
         <td>Number</td>
+        <Button variant="danger">Eliminar</Button>
       </tr>
       <tr>
         <td>3</td>
@@ -49,6 +52,7 @@ export default class Trainstation extends Component {
         <td>Number</td>
         <td>Number</td>
         <td>Number</td>
+        <Button variant="danger">Eliminar</Button>
       </tr>
     </tbody>
   </Table>

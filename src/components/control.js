@@ -10,6 +10,8 @@ import Bank2 from './bank2'
 import Bank3 from './bank3'
 
 
+
+
 export default class Control extends Component {
 
     render() {
@@ -22,7 +24,11 @@ export default class Control extends Component {
 
 
 
-
+<div>
+<Row>
+ 
+</Row>>
+    </div>>
 
 <div> 
 <Row> 

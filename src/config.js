@@ -1,7 +1,6 @@
-import firebase from "firebase";
-
 
 const config = {
+    firebase: {
     apiKey: "AIzaSyCXO7BZW4lAEYBRg_mof07YZII_t3CUQng",
     authDomain: "apptrendeldinero.firebaseapp.com",
     databaseURL: "https://apptrendeldinero.firebaseio.com",
@@ -10,11 +9,7 @@ const config = {
     messagingSenderId: "810000659195",
     appID: "1:810000659195:web:ee6a6814cbb45b143d765e",
     measurementId: "G-7N39EG7RR1"
+},
 };
 
-
-// Initialize Firebase
-
-const fire = firebase.initializeApp(config);
-export default fire;
-
+export default config;
