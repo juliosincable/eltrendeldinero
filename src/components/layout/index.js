@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styles from './style.module.scss';
-import Exit from '../../Exit';
+
 
 
 class Layout extends React.Component {
@@ -16,7 +16,7 @@ class Layout extends React.Component {
                     {children}
                 </div>
                 <div>
-                    <Exit />
+                    
                 </div>
             </Fragment>
         );
