@@ -27,7 +27,7 @@ export default class Buddy extends Component {
    <Card.Title>
               
        <div>
-       <BuddyName name="Julio" />
+       <BuddyName name="usuario" />
             
        </div>
    

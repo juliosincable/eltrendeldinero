@@ -11,7 +11,7 @@ import { ExpenseContext } from '../../context/expenses';
 
 const formSchema = yup.object().shape({
     type: yup.string().min(1).required(),
-    amount: yup.number().required(),
+    amount: yup.string().required(),
     description: yup.string(),
 });
 
@@ -79,7 +79,7 @@ class Page extends React.Component {
         const node = (
             <div className={styles.modalContainer}>
                 <div className={styles.modalBox}>
-                    <h1>Expenses</h1>
+                    <h1>Control</h1>
 
                     <Formik
                         initialValues={{
@@ -107,19 +107,19 @@ class Page extends React.Component {
                                             value={values.type}
                                             onChange={handleChange('type')}
                                             onBlur={handleBlur('type')}
-                                            placeholder="Type"
+                                            placeholder="Tipo"
                                             options={[
                                                 {
-                                                    value: 'house',
-                                                    label: 'House',
+                                                    value: 'Ejecutivo',
+                                                    label: '10',
                                                 },
                                                 {
-                                                    value: 'savings',
-                                                    label: 'Savings',
+                                                    value: 'Primera Clase',
+                                                    label: '50',
                                                 },
                                                 {
-                                                    value: 'transportation',
-                                                    label: 'Transportation',
+                                                    value: 'VIP',
+                                                    label: '100',
                                                 },
                                             ]}
                                         />
@@ -132,7 +132,7 @@ class Page extends React.Component {
                                             value={values.amount}
                                             onChange={handleChange('amount')}
                                             onBlur={handleBlur('amount')}
-                                            placeholder="Amount"
+                                            placeholder="Pago"
                                         />
 
                                         <ErrorMessage name="amount" />
@@ -143,7 +143,7 @@ class Page extends React.Component {
                                             value={values.description}
                                             onChange={handleChange('description')}
                                             onBlur={handleBlur('description')}
-                                            placeholder="Description"
+                                            placeholder="Descripción"
                                         />
 
                                         <ErrorMessage name="description" />

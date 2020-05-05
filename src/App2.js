@@ -2,18 +2,18 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navigation from './components/navigation'
-import Appstyle from './Appstyle'
+import Appstyle2 from './Appstyle2'
 
 
-function App() {
+function App2() {
   return (
     <div className="App">
       
       <Navigation />
        
-    <Appstyle />
+    <Appstyle2 />
     </div>
   );
 }
 
-export default App;
+export default App2;

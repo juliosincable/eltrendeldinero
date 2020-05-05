@@ -1,13 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Info2 from './components/Info2'
 
-import Cards from './components/Cards';
+
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container' 
 
-function Appstyle() {
+function Appstyle2() {
   return (
     <div className="App">
       <Container>
@@ -16,7 +18,7 @@ function Appstyle() {
      <Col xs={12} sm={2} md={2} lg={2} xl={2}>  
      
      </Col>
-     <Col xs={12} sm={8} md={8} lg={8} xl={8}>  <Cards />
+     <Col xs={12} sm={8} md={8} lg={8} xl={8}>  <Info2 />
      
      </Col>
      <Col xs={12} sm={2} md={2} lg={2} xl={2}>  
@@ -51,4 +53,4 @@ function Appstyle() {
   );
 }
 
-export default Appstyle;
+export default Appstyle2;

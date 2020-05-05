@@ -29,9 +29,9 @@ export default class Navigation extends Component {
                     </Nav.Link> 
                 </Navbar.Brand>
                 <Nav className="mr-auto">
-      <Nav.Link href="#home">Enlace 1</Nav.Link>
-      <Nav.Link href="#features">Enlace 2</Nav.Link>
-      <Nav.Link href="#pricing">Enlace 3</Nav.Link>
+      <Nav.Link href="/app">Estación</Nav.Link>
+      <Nav.Link href="/app2">Oficina</Nav.Link>
+      <Nav.Link href="/app3">Perfil</Nav.Link>
     </Nav>
                   
                 </Navbar>
