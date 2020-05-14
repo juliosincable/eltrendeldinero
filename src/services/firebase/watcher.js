@@ -22,9 +22,9 @@ export function watchUserChanges(callback) {
     return unsub;
 }
 
-export function watchExpenses(callback) {
+export function watchUsuarios(callback) {
     const unsub = db
-        .collection('expenses')
+        .collection('usuarios')
         .onSnapshot((snapshot) => {
             const docs = [];
 
@@ -33,7 +33,7 @@ export function watchExpenses(callback) {
 
                 docs.push({
                     ...data,
-                    amount: +data.amount,
+                    nombre_usuario: +data.nombre_usuario,
                     id: doc.id,
                     date: data.date && new Date(data.date),
                 });

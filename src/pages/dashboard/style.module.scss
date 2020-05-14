@@ -21,7 +21,8 @@
 }
 
 .container {
-    padding: 1rem;
+    
+    display: flex;
 }
 
 .table {
@@ -55,9 +56,9 @@
     td {
         border-bottom: 1px solid #777;
         padding: 1rem 0;
-
         &:first-of-type {
             padding-left: 1rem;
         }
+       
     }
 }

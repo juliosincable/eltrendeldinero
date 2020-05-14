@@ -1,22 +1,22 @@
 import { db } from './setup';
 
-export async function createExpense(data) {
+export async function createUsuario(data) {
     return await db
-        .collection('expenses')
+        .collection('usuarios')
         .doc()
         .set(data);
 }
 
-export async function deleteExpense(id) {
+export async function deleteUsuario(id) {
     return await db
-        .collection('expenses')
+        .collection('usuarios')
         .doc(id)
         .delete();
 }
 
-export async function updateExpense(id, data) {
+export async function updateUsuario(id, data) {
     return await db
-        .collection('expenses')
+        .collection('usuarios')
         .doc(id)
         .update(data);
 }

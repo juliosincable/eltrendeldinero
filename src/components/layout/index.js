@@ -15,9 +15,7 @@ class Layout extends React.Component {
                 <div className={styles.content}>
                     {children}
                 </div>
-                <div>
-                    
-                </div>
+                
             </Fragment>
         );
     };

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 import user from './user.svg'
 import BuddyName from './BuddyName'
-
+import MiButton from './MiButton';
 
 
 
@@ -16,95 +16,95 @@ export default class Buddy extends Component {
     render() {
         return (
             <div>
-      
-
+      <MiButton />
+<br />
       <Card>
 
  {/* Primero */}      
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="usuario" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
 {/* Segundo  */} 
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="Juan" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
   
 
   {/* Tercero  */} 
   <Card.Body>
    
-  <img src={user} width="50x" height="50px" alt="logo" /> 
+  <img src={user} width="25x" height="25px" alt="logo" /> 
    <Card.Title>
               
        <div>
         
         
-      <BuddyName name="Peter" /> 
+      <BuddyName name="inactivo" /> 
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
   
   {/* Cuarto */}      
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="Carlos" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
 {/* Quinto  */} 
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="Pedro" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
   
 
@@ -117,48 +117,48 @@ export default class Buddy extends Component {
        <div>
         
        
-        <img src={user} width="50x" height="50px" alt="logo" /> 
-      <BuddyName name="Antonio" /> 
+        <img src={user} width="25x" height="25px" alt="logo" /> 
+      <BuddyName name="inactivo" /> 
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
    
    {/* Septimo */}      
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="Luis" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
 {/* Octavo  */} 
   <Card.Body>
-   <img src={user} width="50x" height="50px" alt="logo" /> 
+   <img src={user} width="25x" height="25px" alt="logo" /> 
       
    <Card.Title>
               
        <div>
-       <BuddyName name="Oscar" />
+       <BuddyName name="inactivo" />
             
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
   
 
@@ -171,14 +171,14 @@ export default class Buddy extends Component {
        <div>
         
        
-        <img src={user} width="50x" height="50px" alt="logo" /> 
-      <BuddyName name="Tom" /> 
+        <img src={user} width="25x" height="25px" alt="logo" /> 
+      <BuddyName name="inactivo" /> 
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
 {/* Ultimo  */} 
@@ -190,17 +190,20 @@ export default class Buddy extends Component {
        <div>
         
        
-        <img src={user} width="50x" height="50px" alt="logo" /> 
-      <BuddyName name="Peter" /> 
+        <img src={user} width="25x" height="25px" alt="logo" /> 
+      <BuddyName name="inactivo" /> 
        </div>
    
    </Card.Title>
         
-   <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   <Card.Link href="#">Perfil</Card.Link>
+    <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
 </Card>
+
+
+
 
 
        

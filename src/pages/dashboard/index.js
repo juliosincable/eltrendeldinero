@@ -1,35 +1,37 @@
 import React from 'react';
 import moment from 'moment';
 import Layout from '../../components/layout';
-import Expense from '../expense';
+import Usuario from '../usuario';
 import styles from './style.module.scss';
-import { ExpenseContext } from '../../context/expenses';
-
+import { UsuariosContext } from '../../context/usuarios';
+import Navigation from '../../components/navigation'
 
 class Page extends React.Component {
     state = {
         isOpen: false,
-        expenseId: null,
+        usuarioId: null,
     }
 
     render() {
         const {
             isOpen,
-            expenseId,
+            usuarioId,
         } = this.state;
         const {
-            expenses,
+            usuarios,
         } = this.context;
-        const expense = expenses.find(n => n.id === expenseId);
+        const usuario = usuarios.find(n => n.id === usuarioId);
 
         return (
-            <Layout>
+        <div>
+        <Navigation />
+         <Layout>
                
                 <div className={styles.container}>
                
                     <div
                         className={styles.buttonFloat}
-                        onClick={() => this.setState({ expenseId: null, isOpen: true })}
+                        onClick={() => this.setState({ usuarioId: null, isOpen: true })}
                     >
                         +
                     </div>
@@ -38,23 +40,30 @@ class Page extends React.Component {
                         <thead>
                             <tr className={styles.tableHeader}>
                                 <th>Fecha</th>
-                                <th>Tipo</th>
-                                <th>Pago</th>
-                                <th>Descripción</th>
+                                <th>id</th>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                              
+                                
                             </tr>
                         </thead>
                         <tbody>
-                        {expenses.map(row => {
+                        {usuarios.map(row => {
                             return (
                                 <tr
                                     key={row.id}
                                     className={styles.tableRow}
-                                    onClick={() => this.setState({ expenseId: row.id, isOpen: true })}
+                                    onClick={() => this.setState({ usuarioId: row.id, isOpen: true })}
                                 >
                                     <td>{moment(row.date).format('DD MMM YYYY hh:mm a')}</td>
-                                    <td>{row.type}</td>
-                                    <td>{row.amount}</td>
-                                    <td>{row.description}</td>
+                                    <td>{row.id}</td>
+                                    <td>{row.nombre_usuario}</td>
+                                    <td>{row.nombre}</td>
+                                    <td>{row.apellido}</td>
+                                    <td>{row.email}</td>
+                                    
                                 </tr>
                             );
                         })}
@@ -62,17 +71,18 @@ class Page extends React.Component {
                     </table>
 
                     {isOpen &&
-                        <Expense
-                            expense={expense}
+                        <Usuario
+                        usuario={usuario}
                             onClose={() => this.setState({ isOpen: false })}
                         />
                     }
                 </div>
             </Layout>
+            </div>
         );
     }
 }
 
-Page.contextType = ExpenseContext;
+Page.contextType = UsuariosContext;
 
 export default Page;

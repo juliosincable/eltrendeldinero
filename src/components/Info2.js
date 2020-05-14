@@ -15,24 +15,24 @@ export default class Info2 extends Component {
     <div className="App">
      
      
-      
+     
      
 
      <Card>
   <Card.Body>
   
-    <Card.Title>Oficina virtual</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">$$$</Card.Subtitle>
+    <Card.Title>app</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">beta </Card.Subtitle>
     <Card.Text>
-      Aquí se verá la información financiera
+      
     </Card.Text>
     
 
    
 
 
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+    <Card.Link href="#">1</Card.Link>
+    <Card.Link href="#">2</Card.Link>
   </Card.Body>
 </Card>
        

@@ -4,77 +4,81 @@ import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import TextField from '../../components/textField';
 import Button from '../../components/button';
-import Select from '../../components/select';
 import FormControl from '../../components/formControl';
 import styles from './style.module.scss';
-import { ExpenseContext } from '../../context/expenses';
+import { UsuariosContext } from '../../context/usuarios';
 
 const formSchema = yup.object().shape({
-    type: yup.string().min(1).required(),
-    amount: yup.string().required(),
-    description: yup.string(),
+    id: yup.string().required(),
+    nombre_usuario: yup.string().required(),
+    apellido: yup.string().required(),
+    nombre: yup.string().required(),
+    email: yup.string().required(),
 });
 
 class Page extends React.Component {
     state = {
-        expense: this.props.expense,
+        usuario: this.props.usuario,
         showReload: false,
     }
 
     componentWillReceiveProps(newProps) {
         const {
-            expense: oldExpense,
+          usuario: oldUsuario,
         } = this.state;
         const {
-            expense: newExpense
+          usuario: newUsuario
         } = newProps;
-
+    
         if (
-            newExpense && oldExpense && (
-                newExpense.type !== oldExpense.type ||
-                newExpense.amount !== oldExpense.amount ||
-                newExpense.description !== oldExpense.description
-            )
+            newUsuario && oldUsuario && (
+                newUsuario.id !== oldUsuario.id ||
+                newUsuario.nombre_usuario !== oldUsuario.nombre_usuario ||
+                newUsuario.apellido !== oldUsuario.apellido ||
+                newUsuario.nombre !== oldUsuario.nombre ||
+                newUsuario.email !== oldUsuario.email
+                )
         ) {
             this.setState({
-                expense: newExpense,
-                showReload: true,
+              usuario: newUsuario,
+              showReload: true, 
             });
         }
     }
-
+    
     onSubmit = async (values, { setSubmitting }) => {
         const {
-            expense,
+          usuario,
         } = this.state;
-
-        if (expense) {
-            await this.context.updateExpense(expense.id, values);
+      
+        if (usuario) {
+            await this.context.updateUsuario(usuario.id, values);
         } else {
-            await this.context.createExpense(values);
+            await this.context.createUsuario(values);
         }
-
+      
         setSubmitting(false);
         this.props.onClose();
-    }
-
-    onDelete = async () => {
-        const { expense } = this.state;
-
-        await this.context.deleteExpense(expense.id);
+      }
+      
+      onDelete = async () => {
+        const { usuario } = this.state;
+      
+        await this.context.deleteUsuario(usuario.id);
         this.props.onClose();
-    }
-
-    onCancel = () => {
+      }
+      
+      onCancel = () => {
         this.props.onClose();
-    }
+      }
+      
 
     render() {
         const {
-            expense,
+            usuario,
             showReload,
         } = this.state;
-        const resource = expense || {};
+        const resource = usuario || {};
 
         const node = (
             <div className={styles.modalContainer}>
@@ -83,9 +87,11 @@ class Page extends React.Component {
 
                     <Formik
                         initialValues={{
-                            type: resource.type || '',
-                            amount: resource.amount || '',
-                            description: resource.description || '',
+                            id: resource.id || '',
+                            nombre_usuario: resource.nombre_usuario || '',
+                            apellido: resource.apellido || '',
+                            nombre: resource.nombre || '',
+                            email: resource.email || '', 
                         }}
                         validationSchema={formSchema}
                         onSubmit={this.onSubmit}
@@ -99,59 +105,63 @@ class Page extends React.Component {
                                 isValid,
                                 isSubmitting,
                             } = props;
-
                             return (
                                 <React.Fragment>
                                     <FormControl type="row">
-                                        <Select
-                                            value={values.type}
-                                            onChange={handleChange('type')}
-                                            onBlur={handleBlur('type')}
-                                            placeholder="Tipo"
-                                            options={[
-                                                {
-                                                    value: 'Ejecutivo',
-                                                    label: '10',
-                                                },
-                                                {
-                                                    value: 'Primera Clase',
-                                                    label: '50',
-                                                },
-                                                {
-                                                    value: 'VIP',
-                                                    label: '100',
-                                                },
-                                            ]}
+                                        <TextField
+                                            value={values.id}
+                                            onChange={handleChange('id')}
+                                            onBlur={handleBlur('id')}
+                                            placeholder="id"
                                         />
-
-                                        <ErrorMessage name="type" />
+                                     <ErrorMessage name="nombre" />
                                     </FormControl>
 
                                     <FormControl type="row">
                                         <TextField
-                                            value={values.amount}
-                                            onChange={handleChange('amount')}
-                                            onBlur={handleBlur('amount')}
-                                            placeholder="Pago"
+                                            value={values.nombre_usuario}
+                                            onChange={handleChange('nombre_usuario')}
+                                            onBlur={handleBlur('nombre_usuario')}
+                                            placeholder="nombre_usuario"
                                         />
-
-                                        <ErrorMessage name="amount" />
+                                     <ErrorMessage name="nombre_usuario" />
                                     </FormControl>
 
-                                    <FormControl type="block">
+                                    <FormControl type="row">
                                         <TextField
-                                            value={values.description}
-                                            onChange={handleChange('description')}
-                                            onBlur={handleBlur('description')}
-                                            placeholder="Descripción"
+                                            value={values.apellido}
+                                            onChange={handleChange('apellido')}
+                                            onBlur={handleBlur('apellido')}
+                                            placeholder="apellido"
                                         />
+                                     <ErrorMessage name="apellido" />
+                                    </FormControl>
+                                    
+                                       
+                                    <FormControl type="row">
+                                        <TextField
+                                            value={values.nombre}
+                                            onChange={handleChange('nombre')}
+                                            onBlur={handleBlur('nombre')}
+                                            placeholder="nombre"
+                                        />                              
+                                        <ErrorMessage name="nombre" />
+                                    </FormControl>
 
-                                        <ErrorMessage name="description" />
+                                    <FormControl type="row">
+                                        <TextField
+                                            value={values.email}
+                                            onChange={handleChange('email')}
+                                            onBlur={handleBlur('email')}
+                                            placeholder="email"
+                                        />
+                              
+                                        <ErrorMessage name="email" />
                                     </FormControl>
 
                                     <FormControl type="block">
                                         <Button
-                                            label={expense ? 'Update' : 'Create'}
+                                            label={usuario ? 'Update' : 'Create'}
                                             disabled={isSubmitting || !isValid}
                                             onClick={handleSubmit}
                                         />
@@ -162,7 +172,7 @@ class Page extends React.Component {
                                             onClick={this.onCancel}
                                         />
 
-                                        {expense &&
+                                        {usuario &&
                                             <Button
                                                 label="Delete"
                                                 type="warning"
@@ -199,6 +209,6 @@ class Page extends React.Component {
     }
 }
 
-Page.contextType = ExpenseContext;
+Page.contextType =  UsuariosContext;
 
 export default Page;

@@ -1,75 +1,45 @@
-import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card'
-
-import Button from 'react-bootstrap/Button'
+import React , { Component } from 'react'
+ 
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-import Col from 'react-bootstrap/Col'
 
-  
+export default class Info3 extends Component {  
+ 
 
-export default class Info extends Component {
-  render() {
+  render() {  
       return (
-    <div className="App">
-     
-     
+        <div> <Navigation />
+        <img src={user} width="60x" height="60px" alt="logo" /> 
+        <Form>
+        <Form.Group>
+          <Form.Label>Usuario</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
       
-     
+        <Form.Group>
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
 
-     <Card>
-  <Card.Body>
-  
-    <Card.Title>Datos personales</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Info</Card.Subtitle>
-    <Card.Text>
-      Actualizar datos
-    </Card.Text>
-    
-    <Form>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email</Form.Label>
-    <Form.Control type="email" placeholder="Asociado a su cuenta AirTm" />
-    <Form.Text className="text-muted">
-      Su información es privada.
-    </Form.Text>
-  </Form.Group>
-
-  <Form.Group controlId="formGridAddress1">
-    <Form.Label>Nombre de usuario</Form.Label>
-    <Form.Control placeholder="Su nombre visible para todos" />
-  </Form.Group>
-
-  <Form.Row>
-    <Col>
-    <Form.Label>Nombre</Form.Label>
-      <Form.Control placeholder="Primer nombre" />
-    </Col>
-    <Col>
-    <Form.Label>Apellido</Form.Label>
-      <Form.Control placeholder="Primer apellido" />
-    </Col>
-  </Form.Row>
-
-  <br />
-
-  
-  <Button variant="outline-success" type="submit">
-    Enviar
-  </Button>
-</Form>
-
-
-
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
-</Card>
-       
-   
-    
-    
-    </div>
-   )
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Form.Group >
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+         Actualizar
+        </Button>
+      </Form>
+      </div>
+    )
   }
 }

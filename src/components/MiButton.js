@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import Buddy from './Buddy'
 
 
 
 
 
-export default class MyTrain extends Component {
+
+export default class MiButton extends Component {
 
     constructor() {
         super()
@@ -26,17 +26,17 @@ export default class MyTrain extends Component {
         return (
             <div>
        
+       
 
-
-<div class="card">
-  <div class="card-body">
-  <Buddy />
+<div>
+  
+  
     ¡Activa el tren e invita a tus amigos a abordar!
     <div>
 
         <button type="button" class="btn btn-outline-success" onClick={this.changeMessage}>{this.state.message}</button>
     </div>
-  </div>
+  
 </div>
        
         </div>

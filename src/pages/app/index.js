@@ -1,35 +1,33 @@
-import React from 'react';
+import React  from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Navigation from './components/navigation'
-import Buddy from './components/Buddy';
 
-
-
+import Navigation from '../../components/navigation'
+import Buddy from '../../components/Buddy';
+import { UsuariosContext } from '../../context/usuarios';
+import Tarjeta from '../../components/tarjeta';
+import Layout from '../../components/layout';
 
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container' 
 
-import Tarjeta from './components/tarjeta';
 
 
 
 
-
-
-function App() {
-  
-  return (
+class Page extends React.Component {
     
-    
-    <div className="App">
-      
-      <div>
 
-      <Navigation />
+
+
+   render() {
+      return (
+    <div>
+       <Navigation />
+      <Layout>
+
+     
 
       <Container>
      
@@ -108,9 +106,13 @@ function App() {
     
      </Row>
 </Container>
+</Layout>
       </div>
-    </div>
-  );
+    )
+   }
 }
 
-export default App;
+
+Page.contextType =  UsuariosContext;
+
+export default Page;

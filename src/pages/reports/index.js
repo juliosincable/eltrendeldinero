@@ -12,7 +12,8 @@ import {
 } from 'react-vis';
 import Layout from '../../components/layout';
 import styles from './style.module.scss';
-import { ExpenseContext } from '../../context/expenses';
+import { UsuariosContext } from '../../context/usuarios';
+import Navigation from '../../components/navigation'
 
 function getDefaultDays() {
     const start = moment().startOf('day');
@@ -27,36 +28,36 @@ function getDefaultDays() {
     };
 }
 
-function formatExpenses(expenses) {
+function formatUsuarios(usuarios) {
     const config = {
-        savings: {
+        Ejecutivo: {
             color: '#f00',
-            title: 'Savings',
+            title: 'ejecutivo',
             strokeWidth: 10,
         },
-        transportation: {
+        PrimeraClase: {
             color: '#0f0',
-            title: 'Transportation',
+            title: 'primeraclase',
             strokeWidth: 10,
         },
-        house: {
+        VIP: {
             color: '#00f',
-            title: 'House',
+            title: 'vip',
             strokeWidth: 10,
         },
     };
-    const expensesByType = groupBy(expenses, n => n.type);
+    const usuariosByType = groupBy(usuarios, n => n.tren);
 
-    return Object.entries(expensesByType).map(([key, arr]) => {
-        const totals = arr.reduce((result, expense) => {
-            const date = moment(expense.date).startOf('day');
+    return Object.entries(usuariosByType).map(([key, arr]) => {
+        const totals = arr.reduce((result, usuario) => {
+            const date = moment(usuario.date).startOf('day');
             const key = date.format('DD MMM, YYYY');
 
             if (!result[key]) {
                 result[key] = { total: 0, timestamp: date.valueOf() };
             }
 
-            result[key].total += expense.amount;
+            result[key].total += usuario.amount;
 
             return result;
         }, getDefaultDays());
@@ -83,10 +84,12 @@ function formatExpenses(expenses) {
 
 class Page extends React.Component {
     render() {
-        const { expenses } = this.context;
-        const groups = formatExpenses(expenses);
+        const { usuarios } = this.context;
+        const groups = formatUsuarios(usuarios);
 
         return (
+            <div>
+            <Navigation />
             <Layout>
                 <div className={styles.container}>
                     <div>
@@ -121,10 +124,11 @@ class Page extends React.Component {
                     </div>
                 </div>
             </Layout>
+            </div> 
         );
     }
 }
 
-Page.contextType = ExpenseContext;
+Page.contextType = UsuariosContext;
 
 export default Page;
