@@ -7,7 +7,7 @@ import MiButton from './MiButton';
 
 
 
-export default class Buddy extends Component {
+export default class Buddy3 extends Component {
 
     
     

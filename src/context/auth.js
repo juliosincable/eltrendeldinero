@@ -12,6 +12,8 @@ export class AuthContextProvider extends React.Component {
         user: null,
     }
 
+    
+
     componentDidMount() {
         this.userWatcherUnsub = watchUserChanges((user) => {
             if (user) {

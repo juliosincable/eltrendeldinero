@@ -5,8 +5,18 @@ import * as yup from 'yup';
 import TextField from '../../components/textField';
 import Button from '../../components/button';
 import FormControl from '../../components/formControl';
-import styles from './style.module.scss';
 import { UsuariosContext } from '../../context/usuarios';
+import icon from '../../components/icon.svg'
+import Navigation from '../../components/navigation'
+
+
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container' 
+
+
+
+
 
 const formSchema = yup.object().shape({
     
@@ -34,8 +44,8 @@ class Page extends React.Component {
             newUsuario && oldUsuario && (
                 
                 newUsuario.nombre_usuario !== oldUsuario.nombre_usuario ||
-                newUsuario.apellido !== oldUsuario.apellido ||
                 newUsuario.nombre !== oldUsuario.nombre ||
+                newUsuario.apellido !== oldUsuario.apellido ||
                 newUsuario.email !== oldUsuario.email
                 )
         ) {
@@ -61,17 +71,9 @@ class Page extends React.Component {
         this.props.onClose();
       }
       
-      onDelete = async () => {
-        const { usuario } = this.state;
       
-        await this.context.deleteUsuario(usuario.id);
-        this.props.onClose();
-      }
       
-      onCancel = () => {
-        this.props.onClose();
-      }
-      
+    
 
     render() {
         const {
@@ -81,13 +83,13 @@ class Page extends React.Component {
         const resource = usuario || {};
 
         const node = (
-            <div className={styles.modalContainer}>
-                <div className={styles.modalBox}>
-                    <h1>Control</h1>
+            <div>
+                <div>
+                    
 
-                    <Formik
+                <Formik
                         initialValues={{
-                          
+                            
                             nombre_usuario: resource.nombre_usuario || '',
                             apellido: resource.apellido || '',
                             nombre: resource.nombre || '',
@@ -106,8 +108,15 @@ class Page extends React.Component {
                                 isSubmitting,
                             } = props;
                             return (
+                                <div>
+                                <Navigation />
+                                <Container fluid>
+                                <Row>
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
                                 <React.Fragment>
-                                    
+                                <img src={icon} width="60px" height="60px" alt="logo" /> 
+                                   
 
                                     <FormControl type="row">
                                         <TextField
@@ -116,7 +125,7 @@ class Page extends React.Component {
                                             onBlur={handleBlur('nombre_usuario')}
                                             placeholder="nombre_usuario"
                                         />
-                                     <ErrorMessage name="nombre_usuario" />
+                                     <ErrorMessage name="nombre" />
                                     </FormControl>
 
                                     <FormControl type="row">
@@ -148,7 +157,7 @@ class Page extends React.Component {
                                             placeholder="email"
                                         />
                               
-                                        <ErrorMessage name="email" />
+                                        <ErrorMessage name="nombre" />
                                     </FormControl>
 
                                     <FormControl type="block">
@@ -158,19 +167,9 @@ class Page extends React.Component {
                                             onClick={handleSubmit}
                                         />
 
-                                        <Button
-                                            label="Cancel"
-                                            type="outline"
-                                            onClick={this.onCancel}
-                                        />
+                                       
 
-                                        {usuario &&
-                                            <Button
-                                                label="Delete"
-                                                type="warning"
-                                                onClick={this.onDelete}
-                                            />
-                                        }
+                                      
                                     </FormControl>
 
                                     {showReload && !isSubmitting &&
@@ -190,6 +189,11 @@ class Page extends React.Component {
                                         </FormControl>
                                     }
                                 </React.Fragment>
+                                </Col>
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
+                                </Row>
+                                </Container>
+                                </div>
                             );
                         }}
                     />
@@ -197,7 +201,7 @@ class Page extends React.Component {
             </div>
         );
 
-        return ReactDOM.createPortal(node, document.getElementById('modal-root'));
+        return ReactDOM.createPortal(node, document.getElementById('root'));
     }
 }
 

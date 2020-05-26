@@ -3,8 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from '../../components/navigation'
 import Buddy from '../../components/Buddy';
+import Buddy2 from '../../components/Buddy2';
+import Buddy3 from '../../components/Buddy3';
 import { UsuariosContext } from '../../context/usuarios';
 import Tarjeta from '../../components/tarjeta';
+import Tarjeta2 from '../../components/tarjeta2';
+import Tarjeta3 from '../../components/tarjeta3';
+import Tarjeta4 from '../../components/tarjeta4';
 import Layout from '../../components/layout';
 
 import Col from 'react-bootstrap/Col'
@@ -40,8 +45,8 @@ class Page extends React.Component {
      
      <Card>
   <Card.Body>
-    <Card.Title>10</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+    <Card.Title>10 USD</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">Ejecutivo</Card.Subtitle>
     <Card.Text>
       
        </Card.Text>
@@ -63,14 +68,14 @@ class Page extends React.Component {
      
      <Card>
   <Card.Body>
-    <Card.Title>50</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+    <Card.Title>50 USD</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">Primera Clase</Card.Subtitle>
     <Card.Text>
       
        </Card.Text>
     <Card.Link href="#">Card Link</Card.Link>
     <Card.Link href="#">Another Link</Card.Link>
-    <Buddy />
+    <Buddy2 />
   </Card.Body>
      </Card>
 
@@ -81,14 +86,14 @@ class Page extends React.Component {
      
      <Card>
   <Card.Body>
-    <Card.Title>100</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+    <Card.Title>100 USD</Card.Title>
+    <Card.Subtitle className="mb-2 text-muted">VIP</Card.Subtitle>
     <Card.Text>
       
        </Card.Text>
     <Card.Link href="#">Card Link</Card.Link>
     <Card.Link href="#">Another Link</Card.Link>
-    <Buddy />
+    <Buddy3 />
   </Card.Body>
      </Card>
      
@@ -99,8 +104,11 @@ class Page extends React.Component {
      <Col xs={12} sm={3} md={3} lg={3} xl={3}> 
      <Tarjeta />
 <br />
-     <Tarjeta />
-     
+     <Tarjeta2 />
+     <br />
+     <Tarjeta3 />
+     <br />
+     <Tarjeta4 />
      
      </Col>
     

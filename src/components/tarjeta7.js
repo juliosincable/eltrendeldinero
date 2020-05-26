@@ -12,7 +12,7 @@ import Card from 'react-bootstrap/Card'
 
 
 
-export default class Tarjeta4 extends Component {
+export default class Tarjeta7 extends Component {
 
     
     
@@ -25,13 +25,11 @@ export default class Tarjeta4 extends Component {
 <Card>
   <Card.Body>
 
-    <Card.Title>Total</Card.Title>
+    <Card.Title>Cobros</Card.Title>
 
-    <Card.Subtitle className="mb-2 text-muted">0 USD</Card.Subtitle>
+    <Card.Subtitle className="mb-2 text-muted">Retiros realizados</Card.Subtitle>
     <Card.Text>
-    Todos los boletos
-    <br />
-    <h4>0 trenes</h4>
+    <h1>0 USD</h1>
     </Card.Text>
     
     <Card.Link href="#">2</Card.Link>

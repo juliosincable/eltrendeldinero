@@ -6,6 +6,10 @@ import styles from './style.module.scss';
 import { UsuariosContext } from '../../context/usuarios';
 import Navigation from '../../components/navigation'
 
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container' 
+
 class Page extends React.Component {
     state = {
         isOpen: false,
@@ -25,6 +29,10 @@ class Page extends React.Component {
         return (
         <div>
         <Navigation />
+        <Container>
+        <Row>
+        <Col xs={12} sm={1} md={1} lg={1} xl={1}></Col>
+                                <Col xs={12} sm={10} md={10} lg={10} xl={10}>
          <Layout>
                
                 <div className={styles.container}>
@@ -78,6 +86,11 @@ class Page extends React.Component {
                     }
                 </div>
             </Layout>
+            
+            </Col>
+            <Col xs={12} sm={1} md={1} lg={1} xl={1}></Col>
+            </Row>
+            </Container>
             </div>
         );
     }

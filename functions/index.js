@@ -5,7 +5,6 @@ const admin = require('firebase-admin');
 
 
 
-
 admin.initializeApp(functions.config().firebase);
 
 let db = admin.firestore();

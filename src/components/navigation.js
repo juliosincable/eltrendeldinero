@@ -7,6 +7,10 @@ import Navbar from 'react-bootstrap/Navbar'
 
 
 
+
+
+
+
 export default class Navigation extends Component {
     render() {
         return (
@@ -50,7 +54,7 @@ export default class Navigation extends Component {
                 
                 </div>
                 <div>
-               <Nav.Link href="/app">Salir</Nav.Link>
+               <Nav.Link href="/app"   >         Salir</Nav.Link>
                  
                 
                 </div>

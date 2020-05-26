@@ -16,6 +16,8 @@ export class UsuariosContextProvider extends React.Component {
         usuarios: [],
     }
 
+
+
     componentDidMount() {
         this.userWatcherUnsub = watchUserChanges((user) => {
             if (user && !this.usuarioWatcherUnsub) {
@@ -40,10 +42,12 @@ export class UsuariosContextProvider extends React.Component {
         }
     }
 
-    createUsuario = async (data) => {
+    createUsuario = async ( data) => {
         try {
             await createUsuario({
                 ...data,
+                
+               
                 date: Date.now(),
             });
         } catch (error) {

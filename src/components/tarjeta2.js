@@ -25,11 +25,13 @@ export default class Tarjeta2 extends Component {
 <Card>
   <Card.Body>
 
-    <Card.Title>Pagos</Card.Title>
+    <Card.Title>Primera Clase</Card.Title>
 
-    <Card.Subtitle className="mb-2 text-muted">1</Card.Subtitle>
+    <Card.Subtitle className="mb-2 text-muted">0 USD</Card.Subtitle>
     <Card.Text>
-      info
+    10 % de 50 USD
+    <br />
+    <h4>0 trenes</h4>
     </Card.Text>
     
     <Card.Link href="#">2</Card.Link>

@@ -6,12 +6,12 @@ import React, { Component } from 'react'
 
 
 
-export default class MiButton extends Component {
+export default class MiButtonCrude extends Component {
 
     constructor() {
         super()
         this.state = {
-            message: "Activar" 
+            message: "Editar" 
 
         }
       }
@@ -19,7 +19,7 @@ export default class MiButton extends Component {
    
 
 
-    changeMessage = () => { this.setState({ message: "Procesando"}) }
+    changeMessage = () => { this.setState({ message: "Guardado"}) }
     
 
     render() {
@@ -31,7 +31,7 @@ export default class MiButton extends Component {
 <div>
   
   
-    10 boletos
+   
     
     <div>
 

@@ -36,6 +36,7 @@ const root = (
                       <GuardRoute type="private" path="/app2" component={App2} />
                       <GuardRoute type="private" path="/app3" component={App3} />
                       <GuardRoute type="private" path="/app4" component={App4} />
+            
                       <GuardRoute type="public" path="/" component={Inicio} />
                       
                   </Switch>

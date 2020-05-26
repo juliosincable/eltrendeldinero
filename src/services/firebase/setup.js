@@ -13,6 +13,7 @@ const firebaseConfig = {
     measurementId: config.firebase.measurementId
   };
 
+ 
 const uiConfig = {
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -27,8 +28,11 @@ const uiConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+
+
 export const auth = firebase.auth();
 export const db = firebase.firestore();
+
 
 db.settings({
     timestampsInSnapshots: true,
@@ -38,3 +42,5 @@ export const startUi = (elementId) => {
     const ui = new firebaseui.auth.AuthUI(auth);
     ui.start(elementId, uiConfig);
 };
+
+

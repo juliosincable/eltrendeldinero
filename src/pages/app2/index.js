@@ -2,10 +2,10 @@ import React  from 'react';
 import Navigation from '../../components/navigation'
 
 
-import Tarjeta from '../../components/tarjeta';
-import Tarjeta2 from '../../components/tarjeta2';
-import Tarjeta3 from '../../components/tarjeta3';
-import Tarjeta4 from '../../components/tarjeta4';
+import Tarjeta5 from '../../components/tarjeta5';
+import Tarjeta6 from '../../components/tarjeta6';
+import Tarjeta7 from '../../components/tarjeta7';
+import Tarjeta8 from '../../components/tarjeta8';
 import Layout from '../../components/layout';
 
 import Col from 'react-bootstrap/Col'
@@ -33,7 +33,7 @@ class Page extends React.Component {
      
      
      <Col xs={12} sm={3} md={3} lg={3} xl={3}>  
-     <Tarjeta />
+     <Tarjeta5 />
 
      
      
@@ -45,7 +45,7 @@ class Page extends React.Component {
 
      <Col xs={12} sm={3} md={3} lg={3} xl={3}>  
      
-     <Tarjeta2 />
+     <Tarjeta6 />
 
      </Col>
 
@@ -53,14 +53,14 @@ class Page extends React.Component {
      <Col xs={12} sm={3} md={3} lg={3} xl={3}>  
      
      
-     <Tarjeta3 />
+     <Tarjeta7 />
 
    
      </Col>
      
      <Col xs={12} sm={3} md={3} lg={3} xl={3}> 
      
-     <Tarjeta4 />
+     <Tarjeta8 />
 
      
      

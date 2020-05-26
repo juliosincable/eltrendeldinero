@@ -6,13 +6,11 @@ export function watchUserChanges(callback) {
             const {
                 uid,
                 email,
-                displayName,
             } = user;
 
             callback({
-                id: uid,
+                uid,
                 email,
-                displayName,
             });
         } else {
             callback(null);
@@ -21,6 +19,8 @@ export function watchUserChanges(callback) {
 
     return unsub;
 }
+
+
 
 export function watchUsuarios(callback) {
     const unsub = db
@@ -32,8 +32,7 @@ export function watchUsuarios(callback) {
                 const data = doc.data();
 
                 docs.push({
-                    ...data,
-                    nombre_usuario: +data.nombre_usuario,
+                    ...data,                    
                     id: doc.id,
                     date: data.date && new Date(data.date),
                 });
