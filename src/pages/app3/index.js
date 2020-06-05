@@ -11,26 +11,50 @@ import Form from 'react-bootstrap/Form'
 
 
 class Page extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = 
-            {value: ''};
-        
+    state = {
+        usuario: this.props.usuario,
+        showReload: false,
+    }
 
-        this.handleInputChange = this.handleInputChange.bind(this);
+    componentWillReceiveProps(newProps) {
+        const {
+          usuario: oldUsuario,
+        } = this.state;
+        const {
+          usuario: newUsuario
+        } = newProps;
+    
+        if (
+            newUsuario && oldUsuario && (
+                
+                newUsuario.nombre_usuario !== oldUsuario.nombre_usuario ||
+                newUsuario.apellido !== oldUsuario.apellido ||
+                newUsuario.nombre !== oldUsuario.nombre ||
+                newUsuario.email !== oldUsuario.email
+                )
+        ) {
+            this.setState({
+              usuario: newUsuario,
+              showReload: true, 
+            });
+        }
     }
     
-
-handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
+    onSubmit = async (values, { setSubmitting }) => {
+        const {
+          usuario,
+        } = this.state;
+      
+        if (usuario) {
+            await this.context.updateUsuario(usuario.id, values);
+        } else {
+            await this.context.createUsuario(values);
+        }
+      
+        setSubmitting(false);
+        this.props.onClose();
+      }
+      
    
     render() {
                             return (

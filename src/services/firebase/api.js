@@ -4,10 +4,10 @@ import { db } from './setup';
 
 
 
-export async function createUsuario(data) {
+export async function createUsuario(id, data) {
     return await db
         .collection('usuarios')
-        .doc()
+        .doc(id)
         .set(data);
 }
 

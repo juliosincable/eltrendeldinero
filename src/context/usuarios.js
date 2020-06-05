@@ -42,11 +42,11 @@ export class UsuariosContextProvider extends React.Component {
         }
     }
 
-    createUsuario = async (data) => {
+    createUsuario = async (id, data) => {
         try {
             await createUsuario({
                 ...data,
-                
+                     id,
                
                 date: Date.now(),
             });

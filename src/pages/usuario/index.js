@@ -9,7 +9,7 @@ import styles from './style.module.scss';
 import { UsuariosContext } from '../../context/usuarios';
 
 const formSchema = yup.object().shape({
-    
+   
     nombre_usuario: yup.string().required(),
     apellido: yup.string().required(),
     nombre: yup.string().required(),
