@@ -38,7 +38,7 @@ export default class Navigation extends Component {
       <Nav.Link href="/app">Estación</Nav.Link>
       <Nav.Link href="/app2">Oficina</Nav.Link>
       <Nav.Link href="/app3">Perfil</Nav.Link>
-      <Nav.Link href="/app4">Invitar</Nav.Link>
+      <Nav.Link >Invitar</Nav.Link>
     </Nav>
     
     </div>
@@ -49,7 +49,7 @@ export default class Navigation extends Component {
 
 
                <div>
-               <Nav.Link href="/reports">Reportes</Nav.Link>
+               <Nav.Link>Reportes</Nav.Link>
                  
                 
                 </div>

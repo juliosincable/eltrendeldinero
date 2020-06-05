@@ -1,5 +1,9 @@
 import { db } from './setup';
 
+
+
+
+
 export async function createUsuario(data) {
     return await db
         .collection('usuarios')
