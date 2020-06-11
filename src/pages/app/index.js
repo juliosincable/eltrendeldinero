@@ -5,12 +5,12 @@ import Navigation from '../../components/navigation'
 import Buddy from '../../components/Buddy';
 import Buddy2 from '../../components/Buddy2';
 import Buddy3 from '../../components/Buddy3';
-import { UsuariosContext } from '../../context/usuarios';
+
 import Tarjeta from '../../components/tarjeta';
 import Tarjeta2 from '../../components/tarjeta2';
 import Tarjeta3 from '../../components/tarjeta3';
 import Tarjeta4 from '../../components/tarjeta4';
-import Layout from '../../components/layout';
+
 
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
@@ -30,7 +30,7 @@ class Page extends React.Component {
       return (
     <div>
        <Navigation />
-      <Layout>
+      
 
      
 
@@ -114,13 +114,13 @@ class Page extends React.Component {
     
      </Row>
 </Container>
-</Layout>
+
       </div>
     )
    }
 }
 
 
-Page.contextType =  UsuariosContext;
+
 
 export default Page;

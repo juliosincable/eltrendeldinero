@@ -1,5 +1,8 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+var express = require('express');
+var app = express();
+
 
 
 
@@ -12,8 +15,9 @@ let db = admin.firestore();
 
 
 
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
-response.send("Hello from Firebase!");
-});
-
+exports.sendWelcomeEmail = functions.auth.user().onCreate((user) => {
+    const email = user.email; 
+    const displayName = user.displayName; 
+      return sendWelcomeEmail(email, displayName);
+  });
+  

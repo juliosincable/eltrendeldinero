@@ -38,23 +38,27 @@ export default class Navigation extends Component {
       <Nav.Link href="/app">Estación</Nav.Link>
       <Nav.Link href="/app2">Oficina</Nav.Link>
       <Nav.Link href="/app3">Perfil</Nav.Link>
-      <Nav.Link >Invitar</Nav.Link>
+      
     </Nav>
     
     </div>
                <div>
-               <Nav.Link href="/dashboard">Administración</Nav.Link>
+               <Nav.Link href="/dashboard"> Control </Nav.Link>
 
                </div>
 
 
-               <div>
-               <Nav.Link>Reportes</Nav.Link>
+              
+                <div>
+               <Nav.Link href="/app"   >         Salir</Nav.Link>
                  
                 
                 </div>
+
+
+
                 <div>
-               <Nav.Link href="/app"   >         Salir</Nav.Link>
+               <Nav.Link></Nav.Link>
                  
                 
                 </div>

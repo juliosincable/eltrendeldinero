@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import * as firebaseui from 'firebaseui';
-import config from '../../config';
+import config from './config';
 
 const firebaseConfig = {
     apiKey: config.firebase.apiKey,
@@ -44,3 +44,4 @@ export const startUi = (elementId) => {
 };
 
 
+export default firebase;

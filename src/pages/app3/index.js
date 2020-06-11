@@ -1,109 +1,161 @@
 import React from 'react';
-import { UsuariosContext } from '../../context/usuarios';
-
+import { AuthContext } from '../../context/auth';
+import { db } from '../../firebase';
 
 import Navigation from '../../components/navigation'
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container' 
 import Form from 'react-bootstrap/Form' 
-
-
+import Button from 'react-bootstrap/Button' 
 
 class Page extends React.Component {
-    state = {
-        usuario: this.props.usuario,
-        showReload: false,
-    }
+  constructor() {
+    super();
+    this.state = {
+      nombre_usuario: " ",
+      nombre: " ",
+      apellido: " ",
+      email: " "
+  
+    };
+      this.handleInputChange = this.handleInputChange.bind(this);
+    
+  }
 
-    componentWillReceiveProps(newProps) {
-        const {
-          usuario: oldUsuario,
-        } = this.state;
-        const {
-          usuario: newUsuario
-        } = newProps;
-    
-        if (
-            newUsuario && oldUsuario && (
-                
-                newUsuario.nombre_usuario !== oldUsuario.nombre_usuario ||
-                newUsuario.apellido !== oldUsuario.apellido ||
-                newUsuario.nombre !== oldUsuario.nombre ||
-                newUsuario.email !== oldUsuario.email
-                )
-        ) {
-            this.setState({
-              usuario: newUsuario,
-              showReload: true, 
-            });
-        }
-    }
-    
-    onSubmit = async (values, { setSubmitting }) => {
-        const {
-          usuario,
-        } = this.state;
-      
-        if (usuario) {
-            await this.context.updateUsuario(usuario.id, values);
-        } else {
-            await this.context.createUsuario(values);
-        }
-      
-        setSubmitting(false);
-        this.props.onClose();
-      }
-      
-   
+
+  
+  handleInputChange = (e) => {
+    this.setState ({ 
+      [e.target.name]: e.target.value 
+    }); 
+  }
+
+
+
+  handleSubmit = e => {
+    // Get a reference to the place in the database where a user profile might be.
+       e.preventDefault();
+    db.collection('users').doc().set({   
+    nombre_usuario: this.state.nombre_usuario,
+    nombre: this.state.nombre,
+    apellido: this.state.apellido,
+    email: this.state.email
+  });  
+    this.setState({
+      nombre_usuario: " ",
+      nombre: " ",
+      apellido: " ",
+      email: " "
+    });
+  };
+
+
+  
+
+  
     render() {
+      
+
                             return (
-                            <div>
+                           
+                            
+                                 <React.Fragment>
                                <Navigation />
+                               
                                 <Container fluid>
+                               
                                 <Row>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}>
                                 
      
-                                       
-                                      <Form>
-                                          <Form.Group>
-                                              <Form.Label>Usuario</Form.Label>
-                                              <Form.Control  value={this.state.nombre_usuario} onChange={this.handleInputChange} type="text" name="nombre_usuario" placeholder="nombre usuario"  >
-                                                  
-                                              </Form.Control>
-                                              <Form.Label>Nombre</Form.Label>
-                                              <Form.Control  value={this.state.name} onChange={this.handleInputChange} type="text" name="nombre" placeholder="nombre"  >
-                                                  
-                                              </Form.Control>
-                                              <Form.Label>Apellido</Form.Label>
-                                              <Form.Control   value={this.state.apellido} onChange={this.handleInputChange} type="text" name="apellido" placeholder="apellido"  >
-                                                  
-                                              </Form.Control>
-                                              <Form.Label>Email</Form.Label>
-                                              <Form.Control   value={this.state.email} onChange={this.handleInputChange} type="text" name="email" placeholder="email"  >
-                                                  
-                                              </Form.Control>
-
-                                              <input type="submit" onClick={onsubmit}>
-
-                                              </input>
+                                        
+                                      <Form onSubmit={this.handleSubmit} >
+                                              <Form.Group>
                                               
+
+                                              
+                                              
+                                              
+                                              
+                                              <Form.Label>Usuario</Form.Label>
+                                              <Form.Control  
+                                              
+                                              type="text" 
+                                              name="nombre_usuario" 
+                                             
+                                              value={this.state.nombre_usuario}
+                                              onChange={this.handleInputChange}  
+                                              >                                                  
+                                              </Form.Control>
+
+
+
+                                              <Form.Label>Nombre</Form.Label>
+                                              <Form.Control 
+                                              
+                                              type="text" 
+                                              name="nombre"
+                                             
+                                              value={this.state.nombre} 
+                                              onChange={this.handleInputChange}
+                                              >
+                                             </Form.Control>
+                                                  
+                                             
+                                              <Form.Label>Apellido</Form.Label>
+                                              <Form.Control  
+                                              
+                                              type="text" 
+                                              name="apellido"                                           
+                                              
+                                              value={this.state.apellido} 
+                                              onChange={this.handleInputChange}
+                                              >                                                 
+                                              </Form.Control>
+
+                                              <Form.Label>Email</Form.Label>
+                                              <Form.Control
+                                               
+                                              type="email" 
+                                              name="email"                                               
+                                              
+                                              value={this.state.email} 
+                                              onChange={this.handleInputChange}
+                                              > 
+                                              
+                                              </Form.Control>
+                                                 <br />
+
+                                              <Button variant="outline-success" type="submit">
+                                              Actualizar
+                                              </Button>
+            
+                                             
+                                              
+
+                                   
+                                                
                                           </Form.Group>
+                                        
                                       </Form>
                                
                                 </Col>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
                                 </Row>
                                 </Container>
-                                </div>
-                            );
+                                </React.Fragment>
+                            
+                                
+                            )
             
         
     }
 }
 
-Page.contextType =  UsuariosContext;
+
+Page.contextType =  AuthContext;
 
 export default Page;
