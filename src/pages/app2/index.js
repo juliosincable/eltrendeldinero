@@ -32,16 +32,25 @@ class Page extends React.Component {
       
    <Container>
    <Row>
-                                <Col xs={12} sm={12} md={12} lg={12} xl={12}><Invitar />
-                                <h4>Invitar</h4>
-                                <Button type="submit" variant="outline-success"><h1> 10</h1></Button>
-                                <Button type="submit" variant="outline-success"><h1>50</h1></Button>
-                                <Button type="submit" variant="outline-success"><h1>100</h1></Button>
-
-                                
-                                
+   <Col xs={12} sm={3} md={3} lg={3} xl={3}></Col>
+   <Col xs={12} sm={6} md={6} lg={6} xl={6}> <Invitar /></Col>
+   <Col xs={12} sm={3} md={3} lg={3} xl={3}></Col>
+  
+   <Row>
+   </Row>
+      
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
                                
+                                <Button type="submit" variant="outline-success"><h2> 10</h2></Button><h2>0</h2>
+                                </Col>
                                 
+
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
+                               
+                                <Button type="submit" variant="outline-success"><h2>50</h2></Button><h2>0</h2>
+                                </Col>
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
+                                <Button type="submit" variant="outline-success"><h2>100</h2></Button><h2>0</h2>
                                 </Col>
                                   
                                 </Row>

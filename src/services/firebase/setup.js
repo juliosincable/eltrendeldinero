@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import * as firebaseui from 'firebaseui';
-import config from './config';
+import config from '../../config';
 
 const firebaseConfig = {
     apiKey: config.firebase.apiKey,
@@ -9,11 +9,8 @@ const firebaseConfig = {
     projectId: config.firebase.projectId,
     storageBucket: config.firebase.storageBucket,
     messagingSenderId: config.firebase.messagingSenderId,
-    appID: config.firebase.appID,
-    measurementId: config.firebase.measurementId
-  };
+};
 
- 
 const uiConfig = {
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -28,11 +25,8 @@ const uiConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-
-
 export const auth = firebase.auth();
 export const db = firebase.firestore();
-
 
 db.settings({
     timestampsInSnapshots: true,
@@ -42,6 +36,3 @@ export const startUi = (elementId) => {
     const ui = new firebaseui.auth.AuthUI(auth);
     ui.start(elementId, uiConfig);
 };
-
-
-export default firebase;

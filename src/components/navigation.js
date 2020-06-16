@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
-
-
 import Nav from 'react-bootstrap/Nav'
-
 import Navbar from 'react-bootstrap/Navbar'
-
-
-
-
-
-
+import Button from 'react-bootstrap/Button'
 
 export default class Navigation extends Component {
     render() {
@@ -38,10 +30,21 @@ export default class Navigation extends Component {
       <Nav.Link href="/app">Estación</Nav.Link>
       <Nav.Link href="/app2">Oficina</Nav.Link>
       <Nav.Link href="/app3">Perfil</Nav.Link>
+      <Nav.Link >Mensajes</Nav.Link>
+      <Nav.Link >Ayuda</Nav.Link>
       
     </Nav>
     
     </div>
+    airtm is true
+    <Button variant="warning">Pruebas</Button>
+   
+    <div>
+    
+    
+               <Nav.Link href="/transacciones"> Transacciones </Nav.Link>
+
+               </div>
                <div>
                <Nav.Link href="/dashboard"> Control </Nav.Link>
 

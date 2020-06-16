@@ -1,30 +1,34 @@
 import React from 'react';
-import { AuthContext } from '../../context/auth';
-import { db } from '../../firebase';
-
+import icon from '../../components/icon.svg'
 import Navigation from '../../components/navigation'
+import Formulario from '../../components/formulario'
 
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container' 
-import Form from 'react-bootstrap/Form' 
+ 
 import Button from 'react-bootstrap/Button' 
+
 
 class Page extends React.Component {
   constructor() {
     super();
-    this.state = {
+    this.state =  { 
+      
+      
       nombre_usuario: " ",
       nombre: " ",
       apellido: " ",
       email: " "
-  
     };
+
+   
       this.handleInputChange = this.handleInputChange.bind(this);
-    
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
+  
   
   handleInputChange = (e) => {
     this.setState ({ 
@@ -33,26 +37,19 @@ class Page extends React.Component {
   }
 
 
-
   handleSubmit = e => {
-    // Get a reference to the place in the database where a user profile might be.
-       e.preventDefault();
-    db.collection('users').doc().set({   
-    nombre_usuario: this.state.nombre_usuario,
-    nombre: this.state.nombre,
-    apellido: this.state.apellido,
-    email: this.state.email
-  });  
-    this.setState({
-      nombre_usuario: " ",
-      nombre: " ",
-      apellido: " ",
-      email: " "
-    });
-  };
+    
+    
 
+    
+  }
 
   
+
+  
+  componentWillUnmount() {
+    
+  }
 
   
     render() {
@@ -67,80 +64,46 @@ class Page extends React.Component {
                                 <Container fluid>
                                
                                 <Row>
+                                <Col xs={12} sm={5} md={5} lg={5} xl={5}></Col>
+                                <Col xs={12} sm={2} md={2} lg={2} xl={2}>
+                                  <img src={icon} width="150px" height="150px" alt="logo" />
+                                  <br/> 
+                                  <br/>    
+                                  
+                                <Button variant="outline-success">Cambiar
+                              
+                                </Button>
+                                <h6>Cambiar imagen de perfil</h6>
+                                  </Col>
+                                <Col xs={12} sm={5} md={5} lg={5} xl={5}></Col>
+                                </Row>
+                                <Row>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
-                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
-                                
-     
-                                        
-                                      <Form onSubmit={this.handleSubmit} >
-                                              <Form.Group>
-                                              
+                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>                                                       
 
-                                              
-                                              
-                                              
-                                              
-                                              <Form.Label>Usuario</Form.Label>
-                                              <Form.Control  
-                                              
-                                              type="text" 
-                                              name="nombre_usuario" 
-                                             
-                                              value={this.state.nombre_usuario}
-                                              onChange={this.handleInputChange}  
-                                              >                                                  
-                                              </Form.Control>
+                            
+                               
+                          
+                               
+<h1>Usuario</h1>
 
-
-
-                                              <Form.Label>Nombre</Form.Label>
-                                              <Form.Control 
-                                              
-                                              type="text" 
-                                              name="nombre"
-                                             
-                                              value={this.state.nombre} 
-                                              onChange={this.handleInputChange}
-                                              >
-                                             </Form.Control>
-                                                  
-                                             
-                                              <Form.Label>Apellido</Form.Label>
-                                              <Form.Control  
-                                              
-                                              type="text" 
-                                              name="apellido"                                           
-                                              
-                                              value={this.state.apellido} 
-                                              onChange={this.handleInputChange}
-                                              >                                                 
-                                              </Form.Control>
-
-                                              <Form.Label>Email</Form.Label>
-                                              <Form.Control
-                                               
-                                              type="email" 
-                                              name="email"                                               
-                                              
-                                              value={this.state.email} 
-                                              onChange={this.handleInputChange}
-                                              > 
-                                              
-                                              </Form.Control>
                                                  <br />
+                                                 <br />
+                                                 <br />
+                                                 
+                                                 
 
                                               <Button variant="outline-success" type="submit">
                                               Actualizar
                                               </Button>
+                                              <br />
+                                              <br />
+                                              <Button variant="outline-danger">Eliminar perfil</Button>
             
                                              
                                               
 
-                                   
-                                                
-                                          </Form.Group>
-                                        
-                                      </Form>
+<Formulario />
                                
                                 </Col>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>
@@ -156,6 +119,6 @@ class Page extends React.Component {
 }
 
 
-Page.contextType =  AuthContext;
+
 
 export default Page;

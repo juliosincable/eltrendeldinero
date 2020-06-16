@@ -113,6 +113,7 @@ class Page extends React.Component {
      </Col>
     
      </Row>
+     <br />
 </Container>
 
       </div>

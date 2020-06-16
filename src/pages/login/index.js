@@ -1,6 +1,6 @@
 import React from 'react';
-import { startUi } from '../../firebase';
 
+import { startUi } from '../../services/firebase';
 
 class Page extends React.Component {
     componentDidMount() {

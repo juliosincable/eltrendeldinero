@@ -1,5 +1,5 @@
 import React from 'react';
-import { watchUserChanges } from '../watcher.js';
+import { watchUserChanges } from '../services/firebase';
 
 export const AuthContext = React.createContext({});
 
