@@ -85,7 +85,7 @@ class Page extends React.Component {
                                
                           
                                
-<h1>Usuario</h1>
+
 
                                                  <br />
                                                  <br />

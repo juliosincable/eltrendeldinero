@@ -29,7 +29,7 @@ export default class Tarjeta8 extends Component {
 
     <Card.Subtitle className="mb-2 text-muted">Por retirar</Card.Subtitle>
     <Card.Text>
-    <h1>0 USD </h1>
+    <h4>0 USD</h4>
     </Card.Text>
     
     <Button variant="outline-success">Pagar</Button>

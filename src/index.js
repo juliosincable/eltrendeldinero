@@ -19,6 +19,7 @@ import App from './pages/app';
 import App2 from './pages/app2';
 import App3 from './pages/app3';
 
+import Mensajes from './pages/mensajes';
 import transacciones from './pages/transacciones';
 import dashboard from './pages/dashboard';
 
@@ -45,7 +46,7 @@ const root = (
                       
                       <GuardRoute type="private" path="/dashboard" component={dashboard} />
                       <GuardRoute type="private" path="/transacciones" component={transacciones} />
-            
+                      <GuardRoute type="private" path="/mensajes" component={Mensajes} />
                       <GuardRoute type="public" path="/" component={Inicio} />
                       
                   </Switch>

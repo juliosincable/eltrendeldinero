@@ -11,7 +11,7 @@ export default class MiButton extends Component {
     constructor() {
         super()
         this.state = {
-            message: "Activar" 
+            message: "Abordar" 
 
         }
       }

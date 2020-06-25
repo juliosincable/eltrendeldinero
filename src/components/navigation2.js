@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Button from 'react-bootstrap/Button'
-import icon from './icon.svg'
 
 
 
-export default class Navigation extends Component {
+
+
+export default class Navigation2 extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand navbar-light bg-dark p-3">
@@ -30,43 +30,26 @@ export default class Navigation extends Component {
                 
                 </Navbar>
                 <Nav className="mr-auto">
-      <Nav.Link href="/app">Estación</Nav.Link>
-      <Nav.Link href="/app2">Oficina</Nav.Link>
-      <Nav.Link href="/app3">Perfil</Nav.Link>
-      <Nav.Link href="/mensajes">Mensajes</Nav.Link>
-      <Nav.Link >Ayuda</Nav.Link>
+      <Nav.Link href="/app">Inicio</Nav.Link>
+      <Nav.Link href="/app">Como funciona</Nav.Link>
+      <Nav.Link href="/app">Quienes somos</Nav.Link>
+      <Nav.Link href="/app">Contacto</Nav.Link>
+      <Nav.Link href="/app">Comprar</Nav.Link>
+      
+      
       
     </Nav>
     
-    </div>
-    
-    <Button variant="warning">Demo</Button>
-   
-    <div>
     
     
-               <Nav.Link href="/transacciones"> Transacciones </Nav.Link>
+    
+               <Nav.Link href="/transacciones"> Registrarte </Nav.Link>
 
-               </div>
-               <div>
-               <Nav.Link href="/dashboard"> Control </Nav.Link>
-
-               </div>
-
-
+               <Nav.Link href="/login">  Ingresa </Nav.Link>
               
-                <div>
-               <Nav.Link href="/app"   >         Salir</Nav.Link>
-                 
                 
-                </div>
-
-
-                <div>
-                  
-                </div>
-                <div>
-                <img src={icon} width="30px" height="30px" alt="logo" />
+                
+               
                <Nav.Link></Nav.Link>
                  
                 

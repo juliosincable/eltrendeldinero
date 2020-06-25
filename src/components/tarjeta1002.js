@@ -29,7 +29,7 @@ export default class Tarjeta1002 extends Component {
 
     <Card.Subtitle className="mb-2 text-muted">Enviado a los pasajeros</Card.Subtitle>
     <Card.Text>
-    0 USD
+    <h4>0 USD</h4>
     <br />
     
     </Card.Text>

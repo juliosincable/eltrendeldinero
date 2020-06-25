@@ -29,7 +29,7 @@ export default class Tarjeta1001 extends Component {
 
     <Card.Subtitle className="mb-2 text-muted">10 % de comisión</Card.Subtitle>
     <Card.Text>
-    0 USD
+    <h4>0 USD</h4>
     <br />
     
     </Card.Text>

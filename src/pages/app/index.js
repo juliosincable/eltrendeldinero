@@ -5,11 +5,8 @@ import Navigation from '../../components/navigation'
 import Buddy from '../../components/Buddy';
 import Buddy2 from '../../components/Buddy2';
 import Buddy3 from '../../components/Buddy3';
+import Tarjetamix from '../../components/tarjetamix';
 
-import Tarjeta from '../../components/tarjeta';
-import Tarjeta2 from '../../components/tarjeta2';
-import Tarjeta3 from '../../components/tarjeta3';
-import Tarjeta4 from '../../components/tarjeta4';
 
 
 import Col from 'react-bootstrap/Col'
@@ -102,13 +99,7 @@ class Page extends React.Component {
      </Col>
      
      <Col xs={12} sm={3} md={3} lg={3} xl={3}> 
-     <Tarjeta />
-<br />
-     <Tarjeta2 />
-     <br />
-     <Tarjeta3 />
-     <br />
-     <Tarjeta4 />
+    <Tarjetamix />
      
      </Col>
     
