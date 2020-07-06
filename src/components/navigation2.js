@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 
 
+
 export default class Navigation2 extends Component {
     render() {
         return (

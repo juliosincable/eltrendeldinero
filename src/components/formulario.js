@@ -1,7 +1,5 @@
 import React from 'react';
-import { AuthContext } from './../context/auth';
-import { db } from './../services/firebase';
-
+import { ExpenseContext } from '../context/expense';
 
 
 
@@ -22,47 +20,26 @@ class Formulario extends React.Component {
 
    
       this.handleInputChange = this.handleInputChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+      
   }
-
-
-  componentDidMount(){
-    db.collection('users').doc("8PJIrkBu6fS19Jn73vKW").set({   
-      nombre_usuario: this.state.nombre_usuario,
-      nombre: this.state.nombre,
-      apellido: this.state.apellido,
-      email: this.state.email
-    });  
-      this.setState({
-        nombre_usuario: this.state.nombre_usuario,
-      nombre: this.state.nombre,
-      apellido: this.state.apellido,
-      email: this.state.email
-      });
-  };
 
 
   
-  handleInputChange = (e) => {
-    this.setState ({ 
-      [e.target.name]: e.target.value 
-    }); 
-  }
-
-
-  handleSubmit = e => {
-    
-    
-
-    
-  }
-
   
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
-  
-  componentWillUnmount() {
+
     
-  }
+
+  this.setState({
+    [name]: value
+  });
+}
+
+
 
   
     render() {
@@ -79,17 +56,17 @@ class Formulario extends React.Component {
                                         
                                 
                           
-                                <Form onSubmit={this.handleSubmit} >
+                                <Form>
                                               <Form.Group>                                                                                           
                                               
                                               
-                                              <Form.Group controlId="formBasicEmail">
+                                              <Form.Group>
                                               <Form.Label>Usuario</Form.Label>
                                               <Form.Control  
                                               
                                               type="text" 
                                               name="nombre_usuario" 
-                                              placeholder="usuario"
+                                              
                                               value={this.state.nombre_usuario}
                                               onChange={this.handleInputChange}  
                                               >                                                  
@@ -99,16 +76,13 @@ class Formulario extends React.Component {
                                               </Form.Text>
                                               </Form.Group>
 
-
-
-
-                                              <Form.Group controlId="formBasicEmail">
+                                              <Form.Group>
                                               <Form.Label>Nombre</Form.Label>
                                               <Form.Control 
                                               
                                               type="text" 
                                               name="nombre"
-                                              placeholder="nombre"
+                                              
                                               value={this.state.nombre} 
                                               onChange={this.handleInputChange}
                                               >
@@ -120,13 +94,13 @@ class Formulario extends React.Component {
 
 
                                                   
-                                              <Form.Group controlId="formBasicEmail">
+                                              <Form.Group>
                                               <Form.Label>Apellido</Form.Label>
                                               <Form.Control  
                                               
                                               type="text" 
                                               name="apellido"                                           
-                                              placeholder="apellido"
+                                              
                                               value={this.state.apellido} 
                                               onChange={this.handleInputChange}
                                               >                                                 
@@ -136,49 +110,13 @@ class Formulario extends React.Component {
                                               </Form.Text>
                                               </Form.Group>
 
-                                              <Form.Group controlId="formBasicEmail">
+                                              <Form.Group>
                                               <Form.Label>Airtm</Form.Label>
                                               <Form.Control
                                                
                                               type="email" 
                                               name="email"                                               
-                                              placeholder="email" 
-                                              value={this.state.email} 
-                                              onChange={this.handleInputChange}
-                                              > 
-                                                                                      
-                                              </Form.Control>
-                                              <Form.Text className="text-muted">
-                                              Esta información es privada y solo puede verla el usuario.
-                                              </Form.Text>
-                                              </Form.Group>
-
-
-                                               <Form.Group controlId="formBasicEmail">
-                                              <Form.Label>Email</Form.Label>
-                                              <Form.Control
-                                               
-                                              type="email" 
-                                              name="email"                                               
-                                              placeholder="email" 
-                                              value={this.state.email} 
-                                              onChange={this.handleInputChange}
-                                              > 
-                                                                                      
-                                              </Form.Control>
-                                              <Form.Text className="text-muted">
-                                              Esta información es privada y solo puede verla el usuario.
-                                              </Form.Text>
-                                              </Form.Group>
-
-
-                                              <Form.Group controlId="formBasicPassword">
-                                              <Form.Label>Password</Form.Label>
-                                              <Form.Control
-                                               
-                                              type="password" 
-                                              name="password"                                               
-                                              placeholder="password" 
+                                              
                                               value={this.state.email} 
                                               onChange={this.handleInputChange}
                                               > 
@@ -190,24 +128,19 @@ class Formulario extends React.Component {
                                               </Form.Group>
 
                                               <Button variant="outline-success" type="submit">
-                                             Cambiar
+                                              Enviar
                                               </Button>
-                                              <br />
-                                                Cambiar password
+                                              
 
-                                                 <br />
-                                                 <br />
-                                                 <br />
+
+                                            
+                                            
+
+                                               
                                                  
                                                  
 
-                                              <Button variant="outline-success" type="submit">
-                                              Actualizar
-                                              </Button>
-                                              <br />
-                                              <br />
-                                              <Button variant="outline-danger">Eliminar perfil</Button>
-            
+                                           
                                              
                                               
 
@@ -228,6 +161,6 @@ class Formulario extends React.Component {
 }
 
 
-Formulario.contextType =  AuthContext;
+Formulario.contextType =  ExpenseContext;
 
 export default Formulario;

@@ -47,8 +47,7 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+    
     <Buddy />
   </Card.Body>
      </Card>
@@ -70,8 +69,7 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+   
     <Buddy2 />
   </Card.Body>
      </Card>
@@ -88,8 +86,7 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
+    
     <Buddy3 />
   </Card.Body>
      </Card>

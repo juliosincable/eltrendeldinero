@@ -34,8 +34,7 @@ export default class Tarjeta4 extends Component {
     <h4>0 trenes</h4>
     </Card.Text>
     
-    <Card.Link href="#">2</Card.Link>
-    <Card.Link href="#">3</Card.Link>
+    
   </Card.Body>
 </Card>
         </div>

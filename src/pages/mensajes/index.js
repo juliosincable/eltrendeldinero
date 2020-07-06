@@ -1,6 +1,6 @@
 import React  from 'react';
 import Navigation from '../../components/navigation'
-import Buddymensajes from '../../components/Buddymensajes';
+
 
 import Col from 'react-bootstrap/Col'
 
@@ -25,10 +25,19 @@ class Page extends React.Component {
        <Navigation />
       
    <Container>
+     
    <Row>
-   <Col xs={12} sm={3} md={3} lg={3} xl={3}>
+   <Col xs={12} sm={1} md={1} lg={1} xl={1}></Col>
+   <Col xs={12} sm={1} md={1} lg={1} xl={1}></Col>
+   <Col xs={12} sm={1} md={1} lg={1} xl={1}>
+     <br />
+     <a href="/mensajes">Escribir</a>
+     <br />
+     <a href="/mensajes">Recibidos</a>
+     <br />
+     <a href="/mensajes">Enviados</a>
 
-       <Buddymensajes />
+       
       
    </Col>
 
@@ -40,6 +49,9 @@ class Page extends React.Component {
   </Form.Group>
   <Button variant="outline-success" type="submit">
     Enviar
+  </Button>
+  <Button variant="outline-danger" type="submit">
+    Eliminar
   </Button>
     </Form>
         </Col>

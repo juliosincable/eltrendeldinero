@@ -2,6 +2,7 @@ import React from 'react';
 import icon from '../../components/icon.svg'
 import Navigation from '../../components/navigation'
 import Formulario from '../../components/formulario'
+import Formulario2 from '../../components/formulario2'
 
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -62,7 +63,7 @@ class Page extends React.Component {
                                <Navigation />
                                
                                 <Container fluid>
-                               
+                               <br />
                                 <Row>
                                 <Col xs={12} sm={5} md={5} lg={5} xl={5}></Col>
                                 <Col xs={12} sm={2} md={2} lg={2} xl={2}>
@@ -88,22 +89,21 @@ class Page extends React.Component {
 
 
                                                  <br />
-                                                 <br />
-                                                 <br />
+                                                 
                                                  
                                                  
 
-                                              <Button variant="outline-success" type="submit">
-                                              Actualizar
-                                              </Button>
+                                              
+                                             
+                                              <Formulario />
+                                              <Formulario2 />
                                               <br />
-                                              <br />
-                                              <Button variant="outline-danger">Eliminar perfil</Button>
+                                              
             
                                              
                                               
 
-<Formulario />
+
                                
                                 </Col>
                                 <Col xs={12} sm={4} md={4} lg={4} xl={4}></Col>

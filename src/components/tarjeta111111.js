@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Button from 'react-bootstrap/Button'
 
 
 import Card from 'react-bootstrap/Card'
@@ -12,7 +12,7 @@ import Card from 'react-bootstrap/Card'
 
 
 
-export default class Tarjeta extends Component {
+export default class Tarjeta111111 extends Component {
 
     
     
@@ -25,16 +25,11 @@ export default class Tarjeta extends Component {
 <Card>
   <Card.Body>
 
-    <Card.Title>Ejecutivo</Card.Title>
+    
+    
+    <Button type="submit" variant="outline-success"> Invitar</Button><h2>0</h2><h6>Pasajeros</h6>
+    
 
-    <Card.Subtitle className="mb-2 text-muted">0 USD</Card.Subtitle>
-    <Card.Text>
-    10 % de 10 USD
-    <br />
-    <h4>0 trenes</h4>
-    </Card.Text>
-    
-    
   </Card.Body>
 </Card>
         </div>

@@ -1,33 +1,22 @@
 import React, { Component } from 'react'
-import Navigation2 from './components/navigation2'
-
-
-
+import Navigation2 from '../../components/navigation2'
+import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Comodidad from './components/Comodidad.png'
-import Ejecutivo from './components/Ejecutivo.jpg'
-import dinerorapido from './components/dinerorapido.svg'
-import Redessociales from './components/Redessociales.svg'
-import Sistemaautomatizado from './components/Sistemaautomatizado.svg'
-import grupodecontactos from './components/grupodecontactos.svg'
-import atencionalcliente from './components/atencionalcliente.svg'
-
-import Compradeboleto from './components/Compradeboleto.svg'
-import dinero from './components/dinero.svg'
-import Redessocialessss from './components/Redessocialessss.svg'
-import barrabeneficios from './components/barrabeneficios.svg'
-import miracomofunciona from './components/miracomofunciona.svg'
-import enqueconsiste from './components/enqueconsiste.svg'
-import trendeldinero from './components/trendeldinero.svg'
-
-
-
-
-
-
-
-import seguridadenpagos from './components/seguridadenpagos.svg'
+import Comodidad from '../../components/Comodidad.png'
+import Ejecutivo from '../../components/Ejecutivo.jpg'
+import dinerorapido from '../../components/dinerorapido.svg'
+import Redessociales from '../../components/Redessociales.svg'
+import Sistemaautomatizado from '../../components/Sistemaautomatizado.svg'
+import grupodecontactos from '../../components/grupodecontactos.svg'
+import atencionalcliente from '../../components/atencionalcliente.svg'
+import Compradeboleto from '../../components/Compradeboleto.svg'
+import dinero from '../../components/dinero.svg'
+import Redessocialessss from '../../components/Redessocialessss.svg'
+import barrabeneficios from '../../components/barrabeneficios.svg'
+import miracomofunciona from '../../components/miracomofunciona.svg'
+import enqueconsiste from '../../components/enqueconsiste.svg'
+import trendeldinero from '../../components/trendeldinero.svg'
+import seguridadenpagos from '../../components/seguridadenpagos.svg'
 
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';

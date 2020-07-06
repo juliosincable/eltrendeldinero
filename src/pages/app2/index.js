@@ -13,13 +13,14 @@ import Tarjeta4 from '../../components/tarjeta4';
 
 
 
+
 import Col from 'react-bootstrap/Col'
 
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
 
-import Invitar from '../../components/invitar'
+
+
 
 
 
@@ -34,29 +35,9 @@ class Page extends React.Component {
        <Navigation />
       
    <Container>
-   <Row>
-   <Col xs={12} sm={3} md={3} lg={3} xl={3}></Col>
-   <Col xs={12} sm={6} md={6} lg={6} xl={6}> <Invitar /></Col>
-   <Col xs={12} sm={3} md={3} lg={3} xl={3}></Col>
-  
-   <Row>
-   </Row>
       
-                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
-                               
-                                <Button type="submit" variant="outline-success"> 10</Button><h2>0</h2><h6>Pasajeros</h6>
-                                </Col>
-                                
-
-                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
-                               
-                                <Button type="submit" variant="outline-success">50</Button><h2>0</h2><h6>Pasajeros</h6>
-                                </Col>
-                                <Col xs={12} sm={4} md={4} lg={4} xl={4}>
-                                <Button type="submit" variant="outline-success">100</Button><h2>0</h2><h6>Pasajeros</h6>
-                                </Col>
-                                  
-                                </Row>
+   <br />
+  
                                 <br />
      <Row>
      

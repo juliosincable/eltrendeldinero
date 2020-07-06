@@ -6,7 +6,7 @@ import icon from './icon.svg'
 import Card from 'react-bootstrap/Card'
 
 
-
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -24,21 +24,25 @@ export default class Tarjetamix extends Component {
 
 <Card>
   
-
+<Card.Title>Amigos</Card.Title>
    
 <Card.Body>
 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-<img src={icon} width="25x" height="25px" alt="logo" /> 
-   
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }} /> 
+
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }} />
+
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/> 
+<img src={icon} width="40x" height="40px" alt="logo" style={{ margin: '10px' }}/>
+<Button variant="outline-success">Siguiente</Button>{' '}
 
 </Card.Body>
   

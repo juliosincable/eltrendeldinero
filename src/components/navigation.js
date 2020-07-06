@@ -3,8 +3,15 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 import icon from './icon.svg'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
-
+//esta funcion trata de sacar el usuario de la sesion con el boton salir
+//esta funcion trata de sacar el usuario de la sesion con el boton salir
+function handleClick(e) {
+      localStorage.clear();
+    }
+//esta funcion trata de sacar el usuario de la sesion con el boton salir
+//esta funcion trata de sacar el usuario de la sesion con el boton salir
 
 export default class Navigation extends Component {
     render() {
@@ -30,12 +37,18 @@ export default class Navigation extends Component {
                 
                 </Navbar>
                 <Nav className="mr-auto">
-      <Nav.Link href="/app">Estación</Nav.Link>
-      <Nav.Link href="/app2">Oficina</Nav.Link>
-      <Nav.Link href="/app3">Perfil</Nav.Link>
-      <Nav.Link href="/mensajes">Mensajes</Nav.Link>
-      <Nav.Link >Ayuda</Nav.Link>
+     
+     
       
+      <NavDropdown title="Estación" id="basic-nav-dropdown">
+        <NavDropdown.Item href="/app">Trenes</NavDropdown.Item>
+        <NavDropdown.Item href="/app2">Oficina</NavDropdown.Item>
+        <NavDropdown.Item href="/app3">Perfil</NavDropdown.Item>
+        <NavDropdown.Item href="/app4">Invitar</NavDropdown.Item>
+      </NavDropdown>
+      <Nav.Link href="/mensajes">Mensajes</Nav.Link>
+      
+      <Nav.Link >Ayuda</Nav.Link>
     </Nav>
     
     </div>
@@ -56,7 +69,7 @@ export default class Navigation extends Component {
 
               
                 <div>
-               <Nav.Link href="/app"   >         Salir</Nav.Link>
+               <Nav.Link href="#" onClick={handleClick}>   Salir</Nav.Link>
                  
                 
                 </div>
