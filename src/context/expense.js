@@ -26,6 +26,7 @@ export class ExpenseContextProvider extends React.Component {
         });
     }
 
+    
     componentWillUnmount() {
         if (this.expenseWatcherUnsub) {
             this.expenseWatcherUnsub();

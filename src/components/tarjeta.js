@@ -6,15 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 
 
-
-
-
-
-
-
 export default class Tarjeta extends Component {
 
-    
+ 
     
         
 

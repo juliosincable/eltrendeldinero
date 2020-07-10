@@ -27,7 +27,7 @@ export default class Tarjeta22222 extends Component {
 
     
     
-    <Button type="submit" variant="outline-success"> Invitar</Button><h2>0</h2><h6>Pasajeros</h6>
+    <Button type="submit" variant="outline-success"> Invitar</Button><h2>0</h2><h6>Pasajeros</h6><h4>Primera Clase</h4>
     
 
   </Card.Body>

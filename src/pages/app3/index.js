@@ -47,10 +47,7 @@ class Page extends React.Component {
 
   
 
-  
-  componentWillUnmount() {
-    
-  }
+ 
 
   
     render() {
@@ -71,7 +68,7 @@ class Page extends React.Component {
                                   <br/> 
                                   <br/>    
                                   
-                                <Button variant="outline-success">Cambiar
+                                <Button variant="outline-success">Subir
                               
                                 </Button>
                                 <h6>Cambiar imagen de perfil</h6>

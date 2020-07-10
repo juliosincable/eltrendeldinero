@@ -5,15 +5,22 @@ import Button from 'react-bootstrap/Button'
 import icon from './icon.svg'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
-//esta funcion trata de sacar el usuario de la sesion con el boton salir
-//esta funcion trata de sacar el usuario de la sesion con el boton salir
-function handleClick(e) {
-      localStorage.clear();
-    }
-//esta funcion trata de sacar el usuario de la sesion con el boton salir
-//esta funcion trata de sacar el usuario de la sesion con el boton salir
+
+
+localStorage.clear()
+
+
+
+
+
 
 export default class Navigation extends Component {
+
+
+  
+ 
+
+
     render() {
         return (
             <nav className="navbar navbar-expand navbar-light bg-dark p-3">
@@ -67,13 +74,16 @@ export default class Navigation extends Component {
                </div>
 
 
-              
+               
                 <div>
-               <Nav.Link href="#" onClick={handleClick}>   Salir</Nav.Link>
+                <Nav.Link href="#"> Salir </Nav.Link>
                  
                 
                 </div>
+                <div>
+               <Nav.Link> </Nav.Link>
 
+               </div>
 
                 <div>
                   
