@@ -1,5 +1,9 @@
 import React from 'react';
+
+
 import icon from '../../components/icon.svg'
+
+import styles from './style.module.scss';
 import Navigation from '../../components/navigation'
 import Formulario from '../../components/formulario'
 import Formulario2 from '../../components/formulario2'
@@ -9,6 +13,8 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container' 
  
 import Button from 'react-bootstrap/Button' 
+
+
 
 
 class Page extends React.Component {
@@ -46,8 +52,8 @@ class Page extends React.Component {
   }
 
   
-
- 
+//necesito pedirle a storage la imagen del user
+//necesito aqui una funcion que le suba imagenes a storage
 
   
     render() {
@@ -64,7 +70,9 @@ class Page extends React.Component {
                                 <Row>
                                 <Col xs={12} sm={5} md={5} lg={5} xl={5}></Col>
                                 <Col xs={12} sm={2} md={2} lg={2} xl={2}>
-                                  <img src={icon} width="150px" height="150px" alt="logo" />
+                                  
+                                  <img src={icon} width="150px" height="150px" alt="img_avatar" className={styles.avatar}/>
+                                  
                                   <br/> 
                                   <br/>    
                                   

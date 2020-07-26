@@ -8,7 +8,7 @@ import Login from './pages/login';
 import Root from './components/root';
 
 import { AuthContextProvider } from './context/auth';
-import { ExpenseContextProvider } from './context/expense';
+
 
 import './style.scss';
 
@@ -31,7 +31,7 @@ import dashboard from './pages/dashboard';
 const root = (
     <BrowserRouter>
     <AuthContextProvider>
-        <ExpenseContextProvider>
+        
             <Root>
                 <Switch>
                       <GuardRoute type="public" path="/login" component={Login} />
@@ -49,7 +49,7 @@ const root = (
                       
                       </Switch>
                 </Root>
-            </ExpenseContextProvider>
+            
         </AuthContextProvider>
     </BrowserRouter>
 );

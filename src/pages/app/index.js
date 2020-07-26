@@ -1,10 +1,9 @@
 import React  from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import MiButton from '../../components/MiButton'
 import Navigation from '../../components/navigation'
 import Buddy from '../../components/Buddy';
-import Buddy2 from '../../components/Buddy2';
-import Buddy3 from '../../components/Buddy3';
+
 import Tarjetamix from '../../components/tarjetamix';
 
 
@@ -21,7 +20,8 @@ import Container from 'react-bootstrap/Container'
 class Page extends React.Component {
     
 
-
+//el componente buddy debe recibir props
+//
 
    render() {
       return (
@@ -47,14 +47,23 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-    
+       <MiButton />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
     <Buddy />
   </Card.Body>
      </Card>
      </Col>
      
      
-     
+   
      
      
      
@@ -70,7 +79,17 @@ class Page extends React.Component {
       
        </Card.Text>
    
-    <Buddy2 />
+       <MiButton />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
   </Card.Body>
      </Card>
 
@@ -86,8 +105,17 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-    
-    <Buddy3 />
+       <MiButton />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
+    <Buddy />
   </Card.Body>
      </Card>
      

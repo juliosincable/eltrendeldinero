@@ -10,7 +10,8 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import styles from './style.module.scss';
 
-
+//una funcion que lee todas las transacciones y las ordena cronologicamente
+//se pinta en pantalla todas las utimas 10
 
 class Page extends React.Component {
     
@@ -61,8 +62,7 @@ class Page extends React.Component {
       <td>0</td>
       <td>0</td>
       <td>$0</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+     
       <Button variant="outline-success">Pagar</Button>
      
     </tr>
@@ -75,9 +75,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <div className={styles.tablacontrol}>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
-      <Button variant="outline-success">Pagar</Button>   
+        
+      <Button variant="outline-success">Pagar</Button>
+     
       </div>
     </tr>
     <tr>
@@ -88,9 +88,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+         
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>4</td>
@@ -100,9 +100,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+          
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>5</td>
@@ -112,9 +112,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+         
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>6</td>
@@ -124,9 +124,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+          
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>7</td>
@@ -136,9 +136,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+         
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>8</td>
@@ -148,9 +148,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+         
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>9</td>
@@ -160,9 +160,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+          
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
     <tr>
     <td>10</td>
@@ -172,9 +172,9 @@ class Page extends React.Component {
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
-      <Button variant="outline-danger">Eliminar</Button>
-      <Button variant="outline-warning">Suspender</Button>
+         
       <Button variant="outline-success">Pagar</Button>
+     
     </tr>
   </tbody>
 </Table>

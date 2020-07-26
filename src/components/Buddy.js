@@ -1,204 +1,48 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
 
+
 import icon from './icon.svg'
-import BuddyName from './BuddyName'
-import MiButton from './MiButton';
+
+import styles from './style.module.scss';
 
 
+
+
+
+function Welcome(props) {
+return <h6>{props.name}</h6>
+}   
 
 export default class Buddy extends Component {
 
     
-    
-        
+   
+
+
 
     render() {
         return (
             <div>
-      <MiButton />
+      
 <br />
       <Card>
 
- {/* Primero */}      
+      
   <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
+   <img src={icon} alt="logo" className={styles.avatar} /> 
       
    <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
    
+       <h6></h6>
+       <Welcome name="inactivo" />
    </Card.Title>
         
    <Card.Link href="#">Perfil</Card.Link>
     <Card.Link href="#">Mensaje</Card.Link>
   </Card.Body>
 
-{/* Segundo  */} 
-  <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
-      
-   <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-  
 
-  {/* Tercero  */} 
-  <Card.Body>
-   
-  <img src={icon} width="25x" height="25px" alt="logo" /> 
-   <Card.Title>
-              
-       <div>
-        
-        
-      <BuddyName name="inactivo" /> 
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-  
-  {/* Cuarto */}      
-  <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
-      
-   <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-
-{/* Quinto  */} 
-  <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
-      
-   <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-  
-
-  {/* Sexto  */} 
-  <Card.Body>
-   
-      
-   <Card.Title>
-              
-       <div>
-        
-       
-        <img src={icon} width="25x" height="25px" alt="logo" /> 
-      <BuddyName name="inactivo" /> 
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-   
-   {/* Septimo */}      
-  <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
-      
-   <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-
-{/* Octavo  */} 
-  <Card.Body>
-   <img src={icon} width="25x" height="25px" alt="logo" /> 
-      
-   <Card.Title>
-              
-       <div>
-       <BuddyName name="inactivo" />
-            
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-  
-
-  {/* Noveno  */} 
-  <Card.Body>
-   
-      
-   <Card.Title>
-              
-       <div>
-        
-       
-        <img src={icon} width="25x" height="25px" alt="logo" /> 
-      <BuddyName name="inactivo" /> 
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
-
-{/* Ultimo  */} 
-<Card.Body>
-   
-      
-   <Card.Title>
-              
-       <div>
-        
-       
-        <img src={icon} width="25x" height="25px" alt="logo" /> 
-      <BuddyName name="inactivo" /> 
-       </div>
-   
-   </Card.Title>
-        
-   <Card.Link href="#">Perfil</Card.Link>
-    <Card.Link href="#">Mensaje</Card.Link>
-  </Card.Body>
 
 </Card>
 

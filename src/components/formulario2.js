@@ -1,14 +1,14 @@
 import React from 'react';
-import { AuthContext } from './../context/auth';
-import { db } from './../services/firebase';
 
-
+//necesito una funcion que me mofifique el correo y la clave de auth
 
 
 import Form from 'react-bootstrap/Form' 
 import Button from 'react-bootstrap/Button' 
 
-class Formulario extends React.Component {
+
+
+class Formulario2 extends React.Component {
   constructor() {
     super();
     this.state =  { 
@@ -22,47 +22,25 @@ class Formulario extends React.Component {
 
    
       this.handleInputChange = this.handleInputChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
 
-  componentDidMount(){
-    db.collection('users').doc("8PJIrkBu6fS19Jn73vKW").set({   
-      nombre_usuario: this.state.nombre_usuario,
-      nombre: this.state.nombre,
-      apellido: this.state.apellido,
-      email: this.state.email
-    });  
-      this.setState({
-        nombre_usuario: this.state.nombre_usuario,
-      nombre: this.state.nombre,
-      apellido: this.state.apellido,
-      email: this.state.email
-      });
-  };
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
+
+    
+
+  this.setState({
+    [name]: value
+  });
+}
 
   
-  handleInputChange = (e) => {
-    this.setState ({ 
-      [e.target.name]: e.target.value 
-    }); 
-  }
-
-
-  handleSubmit = e => {
-    
-    
-
-    
-  }
-
   
-
-  
-  componentWillUnmount() {
-    
-  }
 
   
     render() {
@@ -158,6 +136,6 @@ class Formulario extends React.Component {
 }
 
 
-Formulario.contextType =  AuthContext;
 
-export default Formulario;
+
+export default Formulario2;
