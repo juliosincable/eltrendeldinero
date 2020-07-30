@@ -1,10 +1,9 @@
 import React  from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MiButton from '../../components/MiButton'
-import Navigation from '../../components/navigation'
-import Buddy from '../../components/Buddy';
 
-import Tarjetamix from '../../components/tarjetamix';
+import Navigation from '../../components/navigation'
+
+
 
 
 
@@ -47,17 +46,8 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-       <MiButton />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
+      
+    
   </Card.Body>
      </Card>
      </Col>
@@ -79,17 +69,7 @@ class Page extends React.Component {
       
        </Card.Text>
    
-       <MiButton />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
+
   </Card.Body>
      </Card>
 
@@ -105,17 +85,7 @@ class Page extends React.Component {
     <Card.Text>
       
        </Card.Text>
-       <MiButton />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
-    <Buddy />
+      
   </Card.Body>
      </Card>
      
@@ -124,12 +94,12 @@ class Page extends React.Component {
      </Col>
      
      <Col xs={12} sm={3} md={3} lg={3} xl={3}> 
-    <Tarjetamix />
+    
      
      </Col>
     
      </Row>
-     <br />
+    
 </Container>
 
       </div>

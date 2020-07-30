@@ -1,7 +1,7 @@
 {
   "projects": {
-    "appeltrendeldinero": "apptrendeldinero",
-    "eltrendeldinero": "apptrendeldinero",
-    "default": "apptrendeldinero"
+    "artisanorigin-c7020": "artisanorigin-c7020",
+    "artisanorigin": "artisanorigin-c7020",
+    "default": "artisanorigin-c7020"
   }
 }

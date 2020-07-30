@@ -7,12 +7,14 @@ export function watchUserChanges(callback) {
                 uid,
                 email,
                 displayName,
+                photoURL,
             } = user;
 
             callback({
                 id: uid,
                 email,
                 displayName,
+                photoURL,
             });
         } else {
             callback(null);
